@@ -80,8 +80,15 @@ class UpdatePageBackupOptionsController extends AbstractPageWithStepController
         return AjaxResponseBuilder::nextRouteResponse(Routes::UPDATE_STEP_BACKUP);
     }
 
+    /**
+     * @throws \Exception
+     */
     public function startUpdate(): JsonResponse
     {
+        $updateConfiguration = $this->upgradeContainer->getUpdateConfiguration();
+        $updateConfiguration->merge([UpgradeConfiguration::BACKUP_COMPLETED => false]);
+        $this->upgradeContainer->getConfigurationStorage()->save($updateConfiguration);
+
         return AjaxResponseBuilder::nextRouteResponse(Routes::UPDATE_STEP_UPDATE);
     }
 
@@ -117,6 +124,8 @@ class UpdatePageBackupOptionsController extends AbstractPageWithStepController
         $updateSteps = new Stepper($this->upgradeContainer->getTranslator(), TaskType::TASK_TYPE_UPDATE);
 
         $logsPath = $this->upgradeContainer->getLogsService()->getDownloadLogsPath(TaskType::TASK_TYPE_BACKUP);
+
+        var_dump($this->upgradeContainer->getUpdateConfiguration()->isBackupCompleted());
 
         return array_merge(
             $updateSteps->getStepParams($this::CURRENT_STEP),
