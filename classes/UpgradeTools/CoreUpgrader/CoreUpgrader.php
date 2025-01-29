@@ -449,7 +449,7 @@ abstract class CoreUpgrader
                 (empty($phpRes['msg']) ? '' : ' - ' . $phpRes['msg'] . "\n");
             $this->logPhpError($upgrade_file, $query, $message);
         } else {
-            $this->logger->debug('Migration file: ' . $upgrade_file . ', Query: ' . $query);
+            $this->logger->debug($this->container->getTranslator()->trans('Migration file: %s, Query: %s', [$upgrade_file, $query]));
         }
     }
 
@@ -495,7 +495,7 @@ abstract class CoreUpgrader
         }
 
         if ($this->db->execute($query, false)) {
-            $this->logger->debug('Migration file: ' . $upgrade_file . ', Query: ' . $query);
+            $this->logger->debug($this->container->getTranslator()->trans('Migration file: %s, Query: %s', [$upgrade_file, $query]));
 
             return;
         }
@@ -508,7 +508,7 @@ abstract class CoreUpgrader
 
         $duplicates = ['1050', '1054', '1060', '1061', '1062', '1091'];
         if (!in_array($error_number, $duplicates)) {
-            $this->logger->error('SQL ' . $upgrade_file . ' ' . $error_number . ' in ' . $query . ': ' . $error);
+            $this->logger->error($this->container->getTranslator()->trans('SQL %s %s in %s: %s'), [$upgrade_file, $error_number, $query, $error]);
             $this->container->getUpdateState()->setWarningExists(true);
         }
     }
@@ -817,10 +817,7 @@ abstract class CoreUpgrader
             try {
                 $commandBus->handle($adaptThemeToTRLLanguages);
             } catch (CoreException $e) {
-                $this->logger->error('
-                    PHP Impossible to generate RTL files for theme' . $theme['name'] . "\n" .
-                    $e->getMessage()
-                );
+                $this->logger->warning($this->container->getTranslator()->trans('PHP Impossible to generate RTL files for theme %s: %s', [$theme['name'], $e->getMessage()]));
 
                 $this->container->getUpdateState()->setWarningExists(true);
             }
@@ -872,8 +869,8 @@ abstract class CoreUpgrader
         exec($command, $output, $resultCode);
 
         if ($resultCode !== 0) {
-            throw new UpgradeException("An error was raised when warming up the core cache: \n" . implode("\n", $output));
+            throw new UpgradeException($this->container->getTranslator()->trans("An error was raised when warming up the core cache: \n %s", [implode("\n", $output)]));
         }
-        $this->logger->debug('Core cache has been generated to avoid dependency conflicts.');
+        $this->logger->debug($this->container->getTranslator()->trans('Core cache has been generated to avoid dependency conflicts.'));
     }
 }

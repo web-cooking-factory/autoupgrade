@@ -27,12 +27,20 @@
 use PHPUnit\Framework\TestCase;
 use PrestaShop\Module\AutoUpgrade\Backup\BackupFinder;
 use PrestaShop\Module\AutoUpgrade\Exceptions\BackupException;
+use PrestaShop\Module\AutoUpgrade\UpgradeTools\Translator;
 use Symfony\Component\Filesystem\Filesystem;
 
 class BackupFinderTest extends TestCase
 {
     /** string */
     private static $pathToBackup;
+    /** @var Translator */
+    private $translator;
+
+    public function setUp()
+    {
+        $this->translator = $this->createMock(Translator::class);
+    }
 
     public static function setUpBeforeClass()
     {
@@ -43,7 +51,7 @@ class BackupFinderTest extends TestCase
 
     public function testListingOfBackups()
     {
-        $backupFinder = new BackupFinder(self::$pathToBackup);
+        $backupFinder = new BackupFinder($this->translator, self::$pathToBackup);
 
         $expected = [
             'V1.7.5.0_20240927-115034-19c6d35c',
@@ -71,7 +79,7 @@ class BackupFinderTest extends TestCase
 
     public function testParseBackupMetadata()
     {
-        $backupFinder = new BackupFinder(self::$pathToBackup);
+        $backupFinder = new BackupFinder($this->translator, self::$pathToBackup);
 
         $backups = [
             'V1.7.5.0_20240927-115034-19c6d35c',
@@ -112,17 +120,22 @@ class BackupFinderTest extends TestCase
      */
     public function testParseBackupMetadataError()
     {
-        $backupFinder = new BackupFinder(self::$pathToBackup);
+        $errorMessage = 'An error occurred while formatting the backup name.';
+
+        $this->translator->method('trans')
+            ->willReturn($errorMessage);
+
+        $backupFinder = new BackupFinder($this->translator, self::$pathToBackup);
 
         $this->expectException(BackupException::class);
-        $this->expectExceptionMessage('An error occurred while formatting the backup name.');
+        $this->expectExceptionMessage($errorMessage);
 
         $backupFinder->parseBackupMetadata('V1.7.5.0_toto_20240927-115034-19c6d35c');
     }
 
     public function testSortBackups()
     {
-        $backupFinder = new BackupFinder(self::$pathToBackup);
+        $backupFinder = new BackupFinder($this->translator, self::$pathToBackup);
 
         $actual = [
             [
@@ -173,7 +186,7 @@ class BackupFinderTest extends TestCase
 
     public function testGetSortedAndFormattedAvailableBackups()
     {
-        $backupFinder = new BackupFinder(self::$pathToBackup);
+        $backupFinder = new BackupFinder($this->translator, self::$pathToBackup);
 
         $expected = [
             [

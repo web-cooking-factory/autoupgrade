@@ -32,6 +32,7 @@ use PrestaShop\Module\AutoUpgrade\Exceptions\UpgradeException;
 use PrestaShop\Module\AutoUpgrade\Models\PrestashopRelease;
 use PrestaShop\Module\AutoUpgrade\Parameters\UpgradeConfiguration;
 use PrestaShop\Module\AutoUpgrade\Services\PhpVersionResolverService;
+use PrestaShop\Module\AutoUpgrade\UpgradeTools\Translator;
 use PrestaShop\Module\AutoUpgrade\Xml\FileLoader;
 use Symfony\Component\Filesystem\Filesystem;
 
@@ -39,6 +40,8 @@ class Upgrader
 {
     const DEFAULT_CHECK_VERSION_DELAY_HOURS = 12;
 
+    /** @var Translator */
+    protected $translator;
     /** @var PrestashopRelease */
     private $onlineDestinationRelease;
     /** @var string */
@@ -53,12 +56,14 @@ class Upgrader
     protected $fileLoader;
 
     public function __construct(
+        Translator $translator,
         PhpVersionResolverService $phpRequirementService,
         UpgradeConfiguration $updateConfiguration,
         Filesystem $filesystem,
         FileLoader $fileLoader,
         string $currentPsVersion
     ) {
+        $this->translator = $translator;
         $this->currentPsVersion = $currentPsVersion;
         $this->phpVersionResolverService = $phpRequirementService;
         $this->updateConfiguration = $updateConfiguration;
@@ -129,7 +134,7 @@ class Upgrader
         $channelFile = $this->fileLoader->getXmlChannel();
 
         if (empty($channelFile)) {
-            throw new UpgradeException('Unable to retrieve channel.xml.');
+            throw new UpgradeException($this->translator->trans('Unable to retrieve channel.xml.'));
         }
 
         return $channelFile->autoupgrade->last_version;

@@ -28,17 +28,19 @@
 namespace PrestaShop\Module\AutoUpgrade\Backup;
 
 use InvalidArgumentException;
+use PrestaShop\Module\AutoUpgrade\UpgradeTools\Translator;
 use Symfony\Component\Filesystem\Filesystem;
 
 class BackupManager
 {
-    /**
-     * @var BackupFinder
-     */
+    /** @var Translator */
+    private $translator;
+    /** @var BackupFinder */
     private $backupFinder;
 
-    public function __construct(BackupFinder $backupFinder)
+    public function __construct(Translator $translator, BackupFinder $backupFinder)
     {
+        $this->translator = $translator;
         $this->backupFinder = $backupFinder;
     }
 
@@ -48,7 +50,7 @@ class BackupManager
     public function deleteBackup(string $backupName): void
     {
         if (!in_array($backupName, $this->backupFinder->getAvailableBackups())) {
-            throw new InvalidArgumentException('Backup requested for deletion does not exist.');
+            throw new InvalidArgumentException($this->translator->trans('Backup requested for deletion does not exist.'));
         }
 
         $filesystem = new Filesystem();

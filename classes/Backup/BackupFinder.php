@@ -29,6 +29,7 @@ namespace PrestaShop\Module\AutoUpgrade\Backup;
 
 use DateTime;
 use PrestaShop\Module\AutoUpgrade\Exceptions\BackupException;
+use PrestaShop\Module\AutoUpgrade\UpgradeTools\Translator;
 
 class BackupFinder
 {
@@ -45,12 +46,13 @@ class BackupFinder
     private $backupPath;
 
     /**
-     * BackupFinder constructor.
-     *
-     * @param string $backupPath
+     * @var Translator
      */
-    public function __construct(string $backupPath)
+    private $translator;
+
+    public function __construct(Translator $translator, string $backupPath)
     {
+        $this->translator = $translator;
         $this->backupPath = $backupPath;
     }
 
@@ -162,7 +164,7 @@ class BackupFinder
                 ];
         }
 
-        throw new BackupException('An error occurred while formatting the backup name.');
+        throw new BackupException($this->translator->trans('An error occurred while formatting the backup name.'));
     }
 
     /**
