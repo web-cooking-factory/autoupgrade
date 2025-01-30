@@ -166,7 +166,7 @@ class RoutesConfig
                 'controller' => RestorePageBackupSelectionController::class,
                 'method' => 'index',
                 'middleware' => [
-                    HasBackupAvailable::class
+                    HasBackupAvailable::class,
                 ],
             ],
             Routes::RESTORE_STEP_BACKUP_SELECTION => [
