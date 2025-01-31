@@ -48,7 +48,8 @@ class RestoreConfigurationValidator
     }
 
     /**
-     * @param array<string, mixed> $backupName
+     * @param array<string, mixed> $backupConfiguration
+     *
      * @return string|null
      */
     private function validateBackupName(array $backupConfiguration): ?string
