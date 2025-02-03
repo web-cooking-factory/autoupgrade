@@ -34,14 +34,20 @@ class RestoreConfigurationValidator
 
         $backupNameErrors = $this->validateBackupName($array);
         if ($backupNameErrors) {
-            $errors[] = $backupNameErrors;
+            $errors[] = [
+                'message' => $backupNameErrors,
+                'target' => RestoreConfiguration::BACKUP_NAME
+            ];
 
             return $errors;
         }
 
         $backupNameExistErrors = $this->validateBackupExist($array[RestoreConfiguration::BACKUP_NAME]);
         if ($backupNameExistErrors) {
-            $errors[] = $backupNameExistErrors;
+            $errors[] = [
+                'message' => $backupNameExistErrors,
+                'target' => RestoreConfiguration::BACKUP_NAME
+            ];;
         }
 
         return $errors;
