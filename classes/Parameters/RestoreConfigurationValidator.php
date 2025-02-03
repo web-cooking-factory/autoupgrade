@@ -36,7 +36,7 @@ class RestoreConfigurationValidator
         if ($backupNameErrors) {
             $errors[] = [
                 'message' => $backupNameErrors,
-                'target' => RestoreConfiguration::BACKUP_NAME
+                'target' => RestoreConfiguration::BACKUP_NAME,
             ];
 
             return $errors;
@@ -46,8 +46,8 @@ class RestoreConfigurationValidator
         if ($backupNameExistErrors) {
             $errors[] = [
                 'message' => $backupNameExistErrors,
-                'target' => RestoreConfiguration::BACKUP_NAME
-            ];;
+                'target' => RestoreConfiguration::BACKUP_NAME,
+            ];
         }
 
         return $errors;
