@@ -8,7 +8,11 @@ class RestoreLogExists extends AbstractMiddleware
 {
     public function process(): ?string
     {
-        if ($this->upgradeContainer->getLogsState()->getActiveRestoreLogFile() === null) {
+        $activeRestoreLogFile = $this->upgradeContainer->getLogsState()->getActiveRestoreLogFile();
+        $activeRestoreLogPath = $this->upgradeContainer->getProperty($this->upgradeContainer::LOGS_PATH) . DIRECTORY_SEPARATOR . $activeRestoreLogFile;
+
+        if ($activeRestoreLogFile === null
+            || !$this->upgradeContainer->getFileStorage()->exists($activeRestoreLogPath)) {
             return Routes::HOME_PAGE;
         }
 
