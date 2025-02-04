@@ -72,5 +72,6 @@
             "allow-contrib": false,
             "require": "7.1.*"
         }
-    }
+    },
+    "author": "PrestaShop"
 }

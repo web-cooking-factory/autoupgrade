@@ -8,5 +8,7 @@
         "platform": {
             "php": "7.4"
         }
-    }
+    },
+    "author": "PrestaShop",
+    "license": "AFL-3.0"
 }

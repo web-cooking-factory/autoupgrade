@@ -21,5 +21,7 @@
         "storybook": "sb dev -p 6006 --no-open --disable-telemetry",
         "build-storybook": "sb build",
         "lint": "npx prettier . --write"
-    }
+    },
+    "author": "PrestaShop",
+    "license": "AFL-3.0"
 }
