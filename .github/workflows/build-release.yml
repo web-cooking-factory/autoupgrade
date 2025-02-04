@@ -35,7 +35,7 @@ jobs:
         run: composer install --ansi --prefer-dist --no-interaction --no-progress
 
       - name: Apply header stamps
-        run: php tests/vendor/bin/header-stamp --license=tests/vendor/prestashop/header-stamp/assets/afl.txt --exclude=vendor,node_modules,storybook/var
+        run: php tests/vendor/bin/header-stamp --no-ansi --license=tests/vendor/prestashop/header-stamp/assets/afl.txt --target=./views --exclude=templates,img
 
       - name: Clean-up project
         uses: PrestaShopCorp/github-action-clean-before-deploy@v2.0
