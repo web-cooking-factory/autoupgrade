@@ -2,11 +2,11 @@ $ua-id: "#update_assistant";
 $ua-prefix: "ua-";
 $cdk-prefix: "cdk-";
 
-/* CSS variables */
-/* Global variables to handle both theme */
-/* 9.0.0 */
+//CSS variables
+// Global variables to handle both theme
+// 9.0.0
 :root {
-  /* Primitive */
+  // Primitive
   --#{$ua-prefix}white: #ffffff;
   --#{$ua-prefix}black: #000000;
   --#{$ua-prefix}white-rgb: 255, 255, 255;
@@ -32,7 +32,7 @@ $cdk-prefix: "cdk-";
   --#{$ua-prefix}red-500: var(--#{$cdk-prefix}red-500, #ba151a);
   --#{$ua-prefix}red-50: var(--#{$cdk-prefix}red-50, #ffe4e6);
 
-  /* Global */
+  // Global
   --#{$ua-prefix}border-radius: 0;
   --#{$ua-prefix}base-text-color: var(--#{$ua-prefix}primary-800);
   --#{$ua-prefix}base-text-color-hover: var(--#{$ua-prefix}primary-700);
@@ -86,7 +86,7 @@ body {
   }
 }
 
-/* 1.7.8.0 */
+// 1.7.8.0
 .v1-7-8-0 {
   --#{$ua-prefix}border-radius: 0.5rem;
   --#{$ua-prefix}primary: #25b9d7;
@@ -102,7 +102,7 @@ body {
   --#{$ua-prefix}red-50: #fbc6c3;
 }
 
-/* 1.7.3.0 */
+// 1.7.3.0
 .v1-7-3-0 {
   --#{$ua-prefix}border-radius: 0.3125rem;
   --#{$ua-prefix}primary: #00aff0;
