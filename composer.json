@@ -3,6 +3,7 @@
     "description": "PrestaShop module autoupgrade",
     "homepage": "https://github.com/PrestaShop/autoupgrade",
     "license": "AFL-3.0",
+    "author": "PrestaShop",
     "authors": [
         {
             "name": "PrestaShop SA",
@@ -41,6 +42,5 @@
             "PrestaShop\\Module\\AutoUpgrade\\": "classes/",
             "PrestaShop\\Module\\AutoUpgrade\\Controller\\": "controllers/admin/self-managed"
         }
-    },
-    "author": "PrestaShop"
+    }
 }

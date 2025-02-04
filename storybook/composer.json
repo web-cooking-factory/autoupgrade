@@ -1,9 +1,10 @@
 {
     "name": "prestashop/autoupgrade-storybook",
     "type": "project",
-    "license": "AFL-3.0",
     "minimum-stability": "stable",
     "prefer-stable": true,
+    "license": "AFL-3.0",
+    "author": "PrestaShop",
     "authors": [
         {
             "name": "PrestaShop SA",
@@ -72,6 +73,5 @@
             "allow-contrib": false,
             "require": "7.1.*"
         }
-    },
-    "author": "PrestaShop"
+    }
 }

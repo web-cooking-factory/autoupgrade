@@ -1,4 +1,12 @@
 {
+    "license": "AFL-3.0",
+    "author": "PrestaShop",
+    "authors": [
+        {
+            "name": "PrestaShop SA",
+            "email": "contact@prestashop.com"
+        }
+    ],
     "require-dev": {
         "phpstan/phpstan": "^1.11",
         "prestashop/php-dev-tools": "^5",
@@ -8,7 +16,5 @@
         "platform": {
             "php": "7.4"
         }
-    },
-    "author": "PrestaShop",
-    "license": "AFL-3.0"
+    }
 }
