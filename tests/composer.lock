@@ -123,16 +123,16 @@
         },
         {
             "name": "prestashop/header-stamp",
-            "version": "v2.4",
+            "version": "v2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PrestaShopCorp/header-stamp.git",
-                "reference": "dd3049f8d19aeb0a86ed39b8ca416d91ecc25d44"
+                "reference": "a80160c6d6221a99642dee236d3b8432ad89791d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PrestaShopCorp/header-stamp/zipball/dd3049f8d19aeb0a86ed39b8ca416d91ecc25d44",
-                "reference": "dd3049f8d19aeb0a86ed39b8ca416d91ecc25d44",
+                "url": "https://api.github.com/repos/PrestaShopCorp/header-stamp/zipball/a80160c6d6221a99642dee236d3b8432ad89791d",
+                "reference": "a80160c6d6221a99642dee236d3b8432ad89791d",
                 "shasum": ""
             },
             "require": {
@@ -168,9 +168,9 @@
             "homepage": "https://github.com/PrestaShopCorp/header-stamp",
             "support": {
                 "issues": "https://github.com/PrestaShopCorp/header-stamp/issues",
-                "source": "https://github.com/PrestaShopCorp/header-stamp/tree/v2.4"
+                "source": "https://github.com/PrestaShopCorp/header-stamp/tree/v2.4.1"
             },
-            "time": "2025-02-04T09:33:34+00:00"
+            "time": "2025-02-04T09:46:17+00:00"
         },
         {
             "name": "prestashop/php-dev-tools",
