@@ -45,6 +45,9 @@ export default defineConfig({
     },
     minify: 'terser',
     terserOptions: {
+      format: {
+        comments: false
+      },
       mangle: {
         reserved: ['$']
       }
