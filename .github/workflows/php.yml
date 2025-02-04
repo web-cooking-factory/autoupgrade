@@ -137,10 +137,11 @@ jobs:
           php-version: '8.3'
 
       - run: composer install
+        working-directory: ./tests
 
       - name: Run Header Stamp in Dry Run mode
         run: |
-          php tests/vendor/bin/header-stamp --license=tests/vendor/prestashop/header-stamp/assets/afl.txt --exclude=vendor,node_modules,storybook/var --dry-run  || {
-            echo "::error::Some headers are missing or incorrect. Run 'php tests/vendor/bin/header-stamp --license=tests/vendor/prestashop/header-stamp/assets/afl.txt --exclude=vendor,node_modules,storybook/var' to autofix them."
+          php ./tests/vendor/bin/header-stamp --license=./tests/vendor/prestashop/header-stamp/assets/afl.txt --exclude=vendor,node_modules,storybook/var --dry-run  || {
+            echo "::error::Some headers are missing or incorrect. Run 'php ./tests/vendor/bin/header-stamp --license=./tests/vendor/prestashop/header-stamp/assets/afl.txt --exclude=vendor,node_modules,storybook/var' to autofix them."
             exit 1
           }
