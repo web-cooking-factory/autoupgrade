@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ae6cf89c9f6315a6509f21b4f6671130",
+    "content-hash": "d6520e8a25d9f00dac381f378b71aae6",
     "packages": [],
     "packages-dev": [
         {
@@ -123,16 +123,16 @@
         },
         {
             "name": "prestashop/header-stamp",
-            "version": "v2.3",
+            "version": "v2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PrestaShopCorp/header-stamp.git",
-                "reference": "3104b69ad73b6039c7082dbba4af9dbeb0b936b3"
+                "reference": "dd3049f8d19aeb0a86ed39b8ca416d91ecc25d44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PrestaShopCorp/header-stamp/zipball/3104b69ad73b6039c7082dbba4af9dbeb0b936b3",
-                "reference": "3104b69ad73b6039c7082dbba4af9dbeb0b936b3",
+                "url": "https://api.github.com/repos/PrestaShopCorp/header-stamp/zipball/dd3049f8d19aeb0a86ed39b8ca416d91ecc25d44",
+                "reference": "dd3049f8d19aeb0a86ed39b8ca416d91ecc25d44",
                 "shasum": ""
             },
             "require": {
@@ -168,9 +168,9 @@
             "homepage": "https://github.com/PrestaShopCorp/header-stamp",
             "support": {
                 "issues": "https://github.com/PrestaShopCorp/header-stamp/issues",
-                "source": "https://github.com/PrestaShopCorp/header-stamp/tree/v2.3"
+                "source": "https://github.com/PrestaShopCorp/header-stamp/tree/v2.4"
             },
-            "time": "2023-03-23T14:44:10+00:00"
+            "time": "2025-02-04T09:33:34+00:00"
         },
         {
             "name": "prestashop/php-dev-tools",
