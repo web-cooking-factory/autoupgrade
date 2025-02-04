@@ -30,6 +30,13 @@ jobs:
           npm install --prefix ./_dev
           npm run vite:build --prefix ./_dev
 
+      - name: Install composer dev dependencies for tests
+        working-directory: tests
+        run: composer install --ansi --prefer-dist --no-interaction --no-progress
+
+      - name: Apply header stamps
+        run: php tests/vendor/bin/header-stamp --license=tests/vendor/prestashop/header-stamp/assets/afl.txt --exclude=vendor,node_modules,storybook/var
+
       - name: Clean-up project
         uses: PrestaShopCorp/github-action-clean-before-deploy@v2.0
         with:
