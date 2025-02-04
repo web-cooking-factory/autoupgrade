@@ -14,7 +14,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 7.1
+          php-version: 7.4
           extensions: mbstring, intl, gd, xml, dom, json, fileinfo, curl, zip, iconv, ext-zip
 
       - name: Install composer dependencies
@@ -35,7 +35,7 @@ jobs:
         run: composer install --ansi --prefer-dist --no-interaction --no-progress
 
       - name: Apply header stamps
-        run: php tests/vendor/bin/header-stamp --no-ansi --license=tests/vendor/prestashop/header-stamp/assets/afl.txt --target=./views --exclude=templates,img
+        run: php tests/vendor/bin/header-stamp --license=tests/vendor/prestashop/header-stamp/assets/afl.txt --target=./views --exclude=templates,img
 
       - name: Clean-up project
         uses: PrestaShopCorp/github-action-clean-before-deploy@v2.0
