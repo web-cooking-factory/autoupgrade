@@ -75,5 +75,9 @@ $e: ".version-choice-page";
       display: grid;
       gap: 0.5rem;
     }
+
+    &__local-archive-message {
+      margin-block-end: 0.5rem;
+    }
   }
 }

@@ -70,9 +70,6 @@ $e: ".error-page";
     }
 
     &__button {
-      padding: 0.875rem 1rem;
-      font-size: 0.875rem;
-      font-weight: 400;
       white-space: initial;
     }
 
@@ -92,10 +89,12 @@ $e: ".error-page";
 
       &__buttons {
         flex-direction: column;
+        gap: 1rem;
       }
 
       &__button {
         justify-content: center;
+        width: 100%;
       }
     }
   }

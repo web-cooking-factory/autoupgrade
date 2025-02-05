@@ -1,0 +1,98 @@
+/**
+ * Copyright since 2007 PrestaShop SA and Contributors
+ * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License version 3.0
+ * that is bundled with this package in the file LICENSE.md.
+ * It is also available through the world-wide-web at this URL:
+ * https://opensource.org/licenses/AFL-3.0
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@prestashop.com so we can send you a copy immediately.
+ *
+ * @author    PrestaShop SA and Contributors <contact@prestashop.com>
+ * @copyright Since 2007 PrestaShop SA and Contributors
+ * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+ */
+@use "variables" as *;
+
+// Spacers
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+// stylelint-disable
+
+#{$ua-id} {
+  // Margin utilities
+  @each $key, $value in $spacers {
+    .m-#{$key} {
+      margin: $value !important;
+    }
+  
+    .mt-#{$key} {
+      margin-block-start: $value !important;
+    }
+  
+    .mb-#{$key} {
+      margin-block-end: $value !important;
+    }
+  
+    .ml-#{$key} {
+      margin-inline-start: $value !important;
+    }
+  
+    .mr-#{$key} {
+      margin-inline-end: $value !important;
+    }
+  
+    .mx-#{$key} {
+      margin-inline: $value !important;
+    }
+  
+    .my-#{$key} {
+      margin-block: $value !important;
+    }
+  }
+  
+  // Padding utilities
+  @each $key, $value in $spacers {
+    .p-#{$key} {
+      padding: $value !important;
+    }
+  
+    .pt-#{$key} {
+      padding-block-start: $value !important;
+    }
+  
+    .pb-#{$key} {
+      padding-block-end: $value !important;
+    }
+  
+    .pl-#{$key} {
+      padding-inline-start: $value !important;
+    }
+  
+    .pr-#{$key} {
+      padding-inline-end: $value !important;
+    }
+  
+    .px-#{$key} {
+      padding-inline: $value !important;
+    }
+  
+    .py-#{$key} {
+      padding-block: $value !important;
+    }
+  }
+}
+
+// stylelint-enable

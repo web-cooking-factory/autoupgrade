@@ -29,9 +29,14 @@ $e: ".page";
     justify-content: flex-end;
 
     @container ua-main (max-width: 479px) {
+      > form {
+        width: 100%;
+      }
+
       .btn {
         justify-content: center;
         width: 100%;
+        white-space: normal;
       }
     }
   }
