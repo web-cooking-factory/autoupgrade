@@ -455,6 +455,7 @@ class UpgradeContainer
     {
         if (null === $this->filesystemAdapter) {
             $this->filesystemAdapter = new FilesystemAdapter(
+                $this->getFileSystem(),
                 $this->getFileFilter(),
                 $this->getProperty(self::WORKSPACE_PATH),
                 str_replace(
