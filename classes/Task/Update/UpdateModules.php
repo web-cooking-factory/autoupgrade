@@ -161,6 +161,14 @@ class UpdateModules extends AbstractTask
         return ExitCode::SUCCESS;
     }
 
+    /**
+     * @throws Exception
+     */
+    public function init(): void
+    {
+        $this->container->initPrestaShopCore();
+    }
+
     private function handleException(UpgradeException $e): void
     {
         if ($e->getSeverity() === UpgradeException::SEVERITY_ERROR) {

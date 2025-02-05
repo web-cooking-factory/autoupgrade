@@ -21,6 +21,7 @@
 
 namespace PrestaShop\Module\AutoUpgrade\Task\Update;
 
+use Exception;
 use PrestaShop\Module\AutoUpgrade\Task\AbstractTask;
 use PrestaShop\Module\AutoUpgrade\Task\ExitCode;
 use PrestaShop\Module\AutoUpgrade\Task\TaskName;
@@ -52,5 +53,13 @@ class CleanDatabase extends AbstractTask
         $this->logger->info($this->translator->trans('The database has been cleaned.'));
 
         return ExitCode::SUCCESS;
+    }
+
+    /**
+     * @throws Exception
+     */
+    public function init(): void
+    {
+        $this->container->initPrestaShopCore();
     }
 }

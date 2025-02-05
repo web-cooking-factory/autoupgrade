@@ -42,6 +42,14 @@ class BackupDatabase extends AbstractTask
     /**
      * @throws Exception
      */
+    public function init(): void
+    {
+        $this->container->initPrestaShopCore();
+    }
+
+    /**
+     * @throws Exception
+     */
     public function run(): int
     {
         $this->stepDone = false;

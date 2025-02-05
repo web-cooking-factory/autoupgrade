@@ -39,6 +39,14 @@ class Unzip extends AbstractTask
     /**
      * @throws Exception
      */
+    public function init(): void
+    {
+        $this->container->initPrestaShopCore();
+    }
+
+    /**
+     * @throws Exception
+     */
     public function run(): int
     {
         $filepath = $this->container->getFilePath();
