@@ -1,4 +1,9 @@
 {
+    "author": {
+        "name": "PrestaShop SA",
+        "email": "contact@prestashop.com"
+    },
+    "license": "AFL-3.0",
     "devDependencies": {
         "@sensiolabs/storybook-symfony-webpack5": "file:vendor/sensiolabs/storybook-bundle/storybook",
         "@storybook/addon-a11y": "^8.4.1",
@@ -21,7 +26,5 @@
         "storybook": "sb dev -p 6006 --no-open --disable-telemetry",
         "build-storybook": "sb build",
         "lint": "npx prettier . --write"
-    },
-    "author": "PrestaShop",
-    "license": "AFL-3.0"
+    }
 }

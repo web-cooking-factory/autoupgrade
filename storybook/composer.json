@@ -4,7 +4,6 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "license": "AFL-3.0",
-    "author": "PrestaShop",
     "authors": [
         {
             "name": "PrestaShop SA",

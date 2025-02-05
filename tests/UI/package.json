@@ -2,6 +2,11 @@
     "name": "autoupgrade_tests_ui",
     "version": "1.0.0",
     "description": "",
+    "author": {
+        "name": "PrestaShop SA",
+        "email": "contact@prestashop.com"
+    },
+    "license": "AFL-3.0",
     "scripts": {
         "// ESLint": "To run ESLint commands",
         "lint:fix": "eslint --fix --ignore-path .gitignore .",
@@ -12,8 +17,6 @@
         "test:sanity": "npx playwright test --ui --headed"
     },
     "keywords": [],
-    "author": "PrestaShop",
-    "license": "AFL-3.0",
     "devDependencies": {
         "@types/node": "^20.11.5",
         "@types/semver": "^7.5.8",

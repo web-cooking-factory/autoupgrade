@@ -3,6 +3,11 @@
     "private": true,
     "type": "module",
     "description": "Upgrade to the latest version of PrestaShop in a few clicks, thanks to this automated method.",
+    "author": {
+        "name": "PrestaShop SA",
+        "email": "contact@prestashop.com"
+    },
+    "license": "AFL-3.0",
     "scripts": {
         "vite:watch": "vite --config vite.dev.config.ts",
         "vite:build": "vite build",
@@ -18,8 +23,6 @@
         "type": "git",
         "url": "git@github.com:PrestaShop/autoupgrade.git"
     },
-    "author": "PrestaShop",
-    "license": "AFL-3.0",
     "bugs": {
         "url": "https://github.com/PrestaShop/autoupgrade/issues"
     },
