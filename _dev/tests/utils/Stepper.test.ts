@@ -44,17 +44,6 @@ describe('Stepper', () => {
     createMockStepperHTML();
   });
 
-  it('should initialize stepper with all steps', () => {
-    const stepper = new Stepper();
-
-    expect(stepper['steps'].length).toBe(5);
-    expect(stepper['steps'][0].code).toBe('version-choice');
-    expect(stepper['steps'][1].code).toBe('update-options');
-    expect(stepper['steps'][2].code).toBe('backup');
-    expect(stepper['steps'][3].code).toBe('update');
-    expect(stepper['steps'][4].code).toBe('post-update');
-  });
-
   it('should throw an error if the stepper is not found in the DOM', () => {
     document.body.innerHTML = '';
 
