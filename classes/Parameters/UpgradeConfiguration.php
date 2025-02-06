@@ -65,7 +65,7 @@ class UpgradeConfiguration extends ArrayCollection
         self::PS_AUTOUP_CHANGE_DEFAULT_THEME => false,
         self::PS_AUTOUP_REGEN_EMAIL => true,
         self::PS_AUTOUP_KEEP_IMAGES => true,
-        self::BACKUP_COMPLETED => false,
+        self::BACKUP_COMPLETED => null,
     ];
 
     const CONFIGURATION_KEYS_ABOUT_SHOP = [
@@ -145,9 +145,9 @@ class UpgradeConfiguration extends ArrayCollection
         return $this->getChannelOrDefault() === UpgradeConfiguration::CHANNEL_ONLINE;
     }
 
-    public function isBackupCompleted(): bool
+    public function isBackupCompleted(): ?bool
     {
-        return $this->computeBooleanConfiguration(self::BACKUP_COMPLETED);
+        return $this->get(self::BACKUP_COMPLETED);
     }
 
     /**

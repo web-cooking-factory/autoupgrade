@@ -80,8 +80,15 @@ class UpdatePageBackupOptionsController extends AbstractPageWithStepController
         return AjaxResponseBuilder::nextRouteResponse(Routes::UPDATE_STEP_BACKUP);
     }
 
+    /**
+     * @throws \Exception
+     */
     public function startUpdate(): JsonResponse
     {
+        $updateConfiguration = $this->upgradeContainer->getUpdateConfiguration();
+        $updateConfiguration->merge([UpgradeConfiguration::BACKUP_COMPLETED => false]);
+        $this->upgradeContainer->getConfigurationStorage()->save($updateConfiguration);
+
         return AjaxResponseBuilder::nextRouteResponse(Routes::UPDATE_STEP_UPDATE);
     }
 

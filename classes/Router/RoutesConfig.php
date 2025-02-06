@@ -33,6 +33,7 @@ use PrestaShop\Module\AutoUpgrade\Controller\UpdatePagePostUpdateController;
 use PrestaShop\Module\AutoUpgrade\Controller\UpdatePageUpdateController;
 use PrestaShop\Module\AutoUpgrade\Controller\UpdatePageUpdateOptionsController;
 use PrestaShop\Module\AutoUpgrade\Controller\UpdatePageVersionChoiceController;
+use PrestaShop\Module\AutoUpgrade\Router\Middlewares\BackupChoiceHasBeenMade;
 use PrestaShop\Module\AutoUpgrade\Router\Middlewares\HasBackupAvailable;
 use PrestaShop\Module\AutoUpgrade\Router\Middlewares\LocalChannelXmlAndZipAreValid;
 use PrestaShop\Module\AutoUpgrade\Router\Middlewares\RestoreLogExists;
@@ -144,6 +145,11 @@ class RoutesConfig
             Routes::UPDATE_PAGE_UPDATE => [
                 'controller' => UpdatePageUpdateController::class,
                 'method' => 'index',
+                'middleware' => [
+                    UpdateIsConfigured::class,
+                    LocalChannelXmlAndZipAreValid::class,
+                    BackupChoiceHasBeenMade::class,
+                ],
             ],
             Routes::UPDATE_STEP_UPDATE => [
                 'controller' => UpdatePageUpdateController::class,
