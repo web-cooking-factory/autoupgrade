@@ -22,11 +22,11 @@
 $spacer: 1rem;
 $spacers: (
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
   3: $spacer,
   4: $spacer * 1.5,
-  5: $spacer * 3,
+  5: $spacer * 3
 );
 
 // stylelint-disable
@@ -37,58 +37,58 @@ $spacers: (
     .m-#{$key} {
       margin: $value !important;
     }
-  
+
     .mt-#{$key} {
       margin-block-start: $value !important;
     }
-  
+
     .mb-#{$key} {
       margin-block-end: $value !important;
     }
-  
+
     .ml-#{$key} {
       margin-inline-start: $value !important;
     }
-  
+
     .mr-#{$key} {
       margin-inline-end: $value !important;
     }
-  
+
     .mx-#{$key} {
       margin-inline: $value !important;
     }
-  
+
     .my-#{$key} {
       margin-block: $value !important;
     }
   }
-  
+
   // Padding utilities
   @each $key, $value in $spacers {
     .p-#{$key} {
       padding: $value !important;
     }
-  
+
     .pt-#{$key} {
       padding-block-start: $value !important;
     }
-  
+
     .pb-#{$key} {
       padding-block-end: $value !important;
     }
-  
+
     .pl-#{$key} {
       padding-inline-start: $value !important;
     }
-  
+
     .pr-#{$key} {
       padding-inline-end: $value !important;
     }
-  
+
     .px-#{$key} {
       padding-inline: $value !important;
     }
-  
+
     .py-#{$key} {
       padding-block: $value !important;
     }
