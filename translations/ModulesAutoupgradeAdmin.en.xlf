@@ -869,12 +869,12 @@ Comment: directory already exists</note>
       <trans-unit id="badf6aad60d4a95b698028bc55aa3347">
         <source>Cleaning file cache</source>
         <target>Cleaning file cache</target>
-        <note>Line: 840</note>
+        <note>Line: 837</note>
       </trans-unit>
       <trans-unit id="8c4204265814594491ae20c9899a0fff">
         <source>Running opcache_reset</source>
         <target>Running opcache_reset</target>
-        <note>Line: 842</note>
+        <note>Line: 839</note>
       </trans-unit>
       <trans-unit id="4e32fd9d99ee0c3370c870d4da3d31a9">
         <source>Running generic queries</source>
@@ -924,57 +924,57 @@ Comment: directory already exists</note>
       <trans-unit id="f25792b5b08a78dd01810297d219c10c">
         <source>Unable to find upgrade directory in the installation path.</source>
         <target>Unable to find upgrade directory in the installation path.</target>
-        <note>Line: 269</note>
+        <note>Line: 266</note>
       </trans-unit>
       <trans-unit id="aae22c1ae9a2b451abca76ae8c5c79e8">
         <source>Error while loading SQL upgrade file "%s".</source>
         <target>Error while loading SQL upgrade file "%s".</target>
-        <note>Line: 279</note>
+        <note>Line: 276</note>
       </trans-unit>
       <trans-unit id="8abd985d095a1282f6f01b98c121b41b">
         <source>Cannot find the SQL upgrade files. Please check that the %s folder is not empty.</source>
         <target>Cannot find the SQL upgrade files. Please check that the %s folder is not empty.</target>
-        <note>Line: 286</note>
+        <note>Line: 283</note>
       </trans-unit>
       <trans-unit id="bd996c5d2ed7b7ff38aef7377fc28b8a">
         <source>SQL %s table has been dropped.</source>
         <target>SQL %s table has been dropped.</target>
-        <note>Line: 486</note>
+        <note>Line: 483</note>
       </trans-unit>
       <trans-unit id="a5f51c587cf3395667758cbdb04a5e0b">
         <source>The execution of the query failed: %s, %s</source>
         <target>The execution of the query failed: %s, %s</target>
-        <note>Line: 500</note>
+        <note>Line: 497</note>
       </trans-unit>
       <trans-unit id="10cdbccd344337ec910129a02cdfaac2">
         <source>Migration file: %s, Query: %s</source>
         <target>Migration file: %s, Query: %s</target>
-        <note>Line: 501</note>
+        <note>Line: 498</note>
       </trans-unit>
       <trans-unit id="53983059bf39e1325bba11081ca40e97">
         <source>Keeping current theme</source>
         <target>Keeping current theme</target>
-        <note>Line: 747</note>
+        <note>Line: 744</note>
       </trans-unit>
       <trans-unit id="796b7c49e21f09173214f029c7f02f9d">
         <source>Switching to default theme.</source>
         <target>Switching to default theme.</target>
-        <note>Line: 752</note>
+        <note>Line: 749</note>
       </trans-unit>
       <trans-unit id="475d2ad61e3486ec4af224c5c701b668">
         <source>No RTL language detected, skipping RTL file update.</source>
         <target>No RTL language detected, skipping RTL file update.</target>
-        <note>Line: 769</note>
+        <note>Line: 766</note>
       </trans-unit>
       <trans-unit id="865502b07194399bc188582c6a3e266c">
         <source>Update the RTL files of back-office themes.</source>
         <target>Update the RTL files of back-office themes.</target>
-        <note>Line: 776</note>
+        <note>Line: 773</note>
       </trans-unit>
       <trans-unit id="751c05018f86933c195f46ec3ab55bf8">
         <source>Update the RTL files of front-office themes.</source>
         <target>Update the RTL files of front-office themes.</target>
-        <note>Line: 797</note>
+        <note>Line: 794</note>
       </trans-unit>
     </body>
   </file>
