@@ -44,17 +44,6 @@ class RestorePageBackupSelectionController extends AbstractPageWithStepControlle
         RestoreConfiguration::BACKUP_NAME => RestoreConfiguration::BACKUP_NAME,
     ];
 
-    public function index()
-    {
-        $backups = $this->upgradeContainer->getBackupFinder()->getAvailableBackups();
-
-        if (!empty($backups)) {
-            return parent::index();
-        }
-
-        return AjaxResponseBuilder::nextRouteResponse(Routes::HOME_PAGE);
-    }
-
     protected function getPageTemplate(): string
     {
         return 'restore';
