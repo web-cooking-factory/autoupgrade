@@ -34,6 +34,9 @@ class LogsState extends AbstractState
     /** @var string|null */
     protected $activeUpdateLogFile;
 
+    /** @var string|null */
+    protected $timeZone;
+
     protected function getFileNameForPersistentStorage(): string
     {
         return UpgradeFileNames::STATE_LOGS_FILENAME;
@@ -73,6 +76,19 @@ class LogsState extends AbstractState
     public function setActiveUpdateLogFromDateTime(string $datetime): self
     {
         $this->activeUpdateLogFile = $datetime . '-update.txt';
+        $this->save();
+
+        return $this;
+    }
+
+    public function getTimeZone(): ?string
+    {
+        return $this->timeZone;
+    }
+
+    public function setTimeZone(string $timeZone): self
+    {
+        $this->timeZone = $timeZone;
         $this->save();
 
         return $this;

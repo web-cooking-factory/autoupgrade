@@ -40,11 +40,13 @@ class LogsStateTest extends TestCase
         $this->state->setActiveBackupLogFromDateTime('20121212121212');
         $this->state->setActiveRestoreLogFromDateTime('20251225133713');
         $this->state->setActiveUpdateLogFromDateTime('20250101213000');
+        $this->state->setTimeZone('Europe/Paris');
 
         $expected = [
             'activeBackupLogFile' => '20121212121212-backup.txt',
             'activeRestoreLogFile' => '20251225133713-restore.txt',
             'activeUpdateLogFile' => '20250101213000-update.txt',
+            'timeZone' => 'Europe/Paris',
         ];
 
         $this->assertEquals($expected, $this->state->export());
@@ -62,6 +64,7 @@ class LogsStateTest extends TestCase
                 'activeBackupLogFile' => $expectedFileName,
                 'activeRestoreLogFile' => null,
                 'activeUpdateLogFile' => null,
+                'timeZone' => null,
             ]);
 
         $this->state->setActiveBackupLogFromDateTime($timestamp);
@@ -80,6 +83,7 @@ class LogsStateTest extends TestCase
                 'activeBackupLogFile' => null,
                 'activeRestoreLogFile' => $expectedFileName,
                 'activeUpdateLogFile' => null,
+                'timeZone' => null,
             ]);
 
         $this->state->setActiveRestoreLogFromDateTime($timestamp);
@@ -98,10 +102,29 @@ class LogsStateTest extends TestCase
                 'activeBackupLogFile' => null,
                 'activeRestoreLogFile' => null,
                 'activeUpdateLogFile' => $expectedFileName,
+                'timeZone' => null,
             ]);
 
         $this->state->setActiveUpdateLogFromDateTime($timestamp);
         $this->assertEquals($expectedFileName, $this->state->getActiveUpdateLogFile());
+    }
+
+    public function testSetAndGetTimezone(): void
+    {
+        $timezone = 'Europe/Paris';
+
+        $this->fileConfigurationStorageMock
+            ->expects($this->once())
+            ->method('save')
+            ->with([
+                'activeBackupLogFile' => null,
+                'activeRestoreLogFile' => null,
+                'activeUpdateLogFile' => null,
+                'timeZone' => $timezone,
+            ]);
+
+        $this->state->setTimeZone($timezone);
+        $this->assertEquals($timezone, $this->state->getTimeZone());
     }
 
     public function testLoadState(): void
@@ -110,6 +133,7 @@ class LogsStateTest extends TestCase
             'activeBackupLogFile' => '20241218-backup.txt',
             'activeRestoreLogFile' => '20241218-restore.txt',
             'activeUpdateLogFile' => '20241218-update.txt',
+            'timeZone' => 'Europe/Paris',
         ];
 
         $this->fileConfigurationStorageMock
@@ -123,6 +147,7 @@ class LogsStateTest extends TestCase
         $this->assertEquals('20241218-backup.txt', $this->state->getActiveBackupLogFile());
         $this->assertEquals('20241218-restore.txt', $this->state->getActiveRestoreLogFile());
         $this->assertEquals('20241218-update.txt', $this->state->getActiveUpdateLogFile());
+        $this->assertEquals('Europe/Paris', $this->state->getTimeZone());
     }
 
     public function testSaveState(): void
@@ -131,6 +156,7 @@ class LogsStateTest extends TestCase
             'activeBackupLogFile' => '20241218210000-backup.txt',
             'activeRestoreLogFile' => '20241218210000-restore.txt',
             'activeUpdateLogFile' => '20241218210000-update.txt',
+            'timeZone' => 'Europe/Paris',
         ];
 
         $this->fileConfigurationStorageMock
@@ -145,12 +171,14 @@ class LogsStateTest extends TestCase
             'activeBackupLogFile' => '20241218210000-backup.txt',
             'activeRestoreLogFile' => '20241218210000-restore.txt',
             'activeUpdateLogFile' => '20241218210000-update.txt',
+            'timeZone' => 'Europe/Paris',
         ];
 
         $expectedState1 = [
             'activeBackupLogFile' => '20241218210000-backup.txt',
             'activeRestoreLogFile' => '20250101122600-restore.txt',
             'activeUpdateLogFile' => '20241218210000-update.txt',
+            'timeZone' => 'Europe/Paris',
         ];
 
         $this->fileConfigurationStorageMock
