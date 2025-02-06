@@ -26,6 +26,7 @@ export default class Stepper {
   #currentClass = `${this.#baseClass}--current`;
   #doneClass = `${this.#baseClass}--done`;
   #normalClass = `${this.#baseClass}--normal`;
+  #stepperHydrationClass = 'stepper--hydration';
 
   constructor() {
     this.#initStepper();
@@ -81,7 +82,7 @@ export default class Stepper {
       return;
     }
 
-    this.#stepper?.classList.add('stepper--hydration');
+    this.#stepper?.classList.add(this.#stepperHydrationClass);
 
     this.#steps.forEach((step, i) => {
       const { element } = step;
