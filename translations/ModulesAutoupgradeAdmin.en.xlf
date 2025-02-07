@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file original="messages.en-US" source-language="en-US" target-language="en-US" datatype="plaintext">
+  <file original="messages" source-language="en-US" target-language="en-US" datatype="plaintext">
     <body>
       <trans-unit id="fff77a9b7fadd2dd38b16678c8b000cf">
         <source>Unable to create directory %s: %s</source>
