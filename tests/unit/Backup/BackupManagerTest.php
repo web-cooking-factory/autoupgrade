@@ -20,12 +20,20 @@
 use PHPUnit\Framework\TestCase;
 use PrestaShop\Module\AutoUpgrade\Backup\BackupFinder;
 use PrestaShop\Module\AutoUpgrade\Backup\BackupManager;
+use PrestaShop\Module\AutoUpgrade\UpgradeTools\Translator;
 use Symfony\Component\Filesystem\Filesystem;
 
 class BackupManagerTest extends TestCase
 {
     /** string */
     private static $pathToBackup;
+    /** @var Translator */
+    private $translator;
+
+    public function setUp()
+    {
+        $this->translator = $this->createMock(Translator::class);
+    }
 
     public static function setUpBeforeClass()
     {
@@ -36,8 +44,8 @@ class BackupManagerTest extends TestCase
 
     public function testBackupIsDeleted()
     {
-        $backupFinder = new BackupFinder(self::$pathToBackup);
-        $backupManager = new BackupManager($backupFinder);
+        $backupFinder = new BackupFinder($this->translator, self::$pathToBackup);
+        $backupManager = new BackupManager($this->translator, $backupFinder);
 
         $expectedBeforeDeletion = [
             'V1.7.5.0_20240927-115034-19c6d35c',

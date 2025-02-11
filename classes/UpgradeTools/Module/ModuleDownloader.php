@@ -72,7 +72,7 @@ class ModuleDownloader
         }
 
         if (!$downloadSuccessful) {
-            throw (new UpgradeException('All download attempts have failed. Check your environment and try again.'))->setSeverity(UpgradeException::SEVERITY_ERROR);
+            throw (new UpgradeException($this->translator->trans('All download attempts have failed. Check your environment and try again.')))->setSeverity(UpgradeException::SEVERITY_ERROR);
         }
     }
 

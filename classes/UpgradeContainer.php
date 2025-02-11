@@ -320,7 +320,7 @@ class UpgradeContainer
     public function getBackupFinder(): BackupFinder
     {
         if (null === $this->backupFinder) {
-            $this->backupFinder = new BackupFinder($this->getProperty(self::BACKUP_PATH));
+            $this->backupFinder = new BackupFinder($this->getTranslator(), $this->getProperty(self::BACKUP_PATH));
         }
 
         return $this->backupFinder;
@@ -329,7 +329,7 @@ class UpgradeContainer
     public function getBackupManager(): BackupManager
     {
         if (null === $this->backupManager) {
-            $this->backupManager = new BackupManager($this->getBackupFinder());
+            $this->backupManager = new BackupManager($this->getTranslator(), $this->getBackupFinder());
         }
 
         return $this->backupManager;
@@ -435,6 +435,7 @@ class UpgradeContainer
             }
 
             $upgrader = new Upgrader(
+                $this->getTranslator(),
                 $this->getPhpVersionResolverService(),
                 $this->getUpdateConfiguration(),
                 $this->getFileSystem(),
@@ -737,10 +738,13 @@ class UpgradeContainer
         return $this->restoreConfiguration;
     }
 
+    /**
+     * @throws Exception
+     */
     public function getDistributionApiService(): DistributionApiService
     {
         if (null === $this->distributionApiService) {
-            $this->distributionApiService = new DistributionApiService();
+            $this->distributionApiService = new DistributionApiService($this->getTranslator());
         }
 
         return $this->distributionApiService;

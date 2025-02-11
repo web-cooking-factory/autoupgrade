@@ -90,6 +90,7 @@ class PhpVersionResolverServiceTest extends TestCase
             ->willReturn($channel);
 
         $distributionApiService = $this->getMockBuilder(DistributionApiService::class)
+            ->disableOriginalConstructor()
             ->setMethods(['getReleases', 'getPhpVersionRequirements'])
             ->getMock();
 
@@ -123,6 +124,7 @@ class PhpVersionResolverServiceTest extends TestCase
             ->getMock();
 
         $distributionApiService = $this->getMockBuilder(DistributionApiService::class)
+            ->disableOriginalConstructor()
             ->setMethods(['getReleases', 'getPhpVersionRequirements'])
             ->getMock();
 
@@ -153,6 +155,7 @@ class PhpVersionResolverServiceTest extends TestCase
             ->willReturn($channel);
 
         $distributionApiService = $this->getMockBuilder(DistributionApiService::class)
+            ->disableOriginalConstructor()
             ->setMethods(['getReleases', 'getPhpVersionRequirements'])
             ->getMock();
 
@@ -191,6 +194,7 @@ class PhpVersionResolverServiceTest extends TestCase
             ->willReturn($channel);
 
         $distributionApiService = $this->getMockBuilder(DistributionApiService::class)
+            ->disableOriginalConstructor()
             ->setMethods(['getReleases', 'getPhpVersionRequirements'])
             ->getMock();
 
@@ -243,6 +247,7 @@ class PhpVersionResolverServiceTest extends TestCase
             ->willReturn($channel);
 
         $distributionApiService = $this->getMockBuilder(DistributionApiService::class)
+            ->disableOriginalConstructor()
             ->setMethods(['getReleases', 'getPhpVersionRequirements'])
             ->getMock();
 
@@ -296,6 +301,7 @@ class PhpVersionResolverServiceTest extends TestCase
             ->willReturn($channel);
 
         $distributionApiService = $this->getMockBuilder(DistributionApiService::class)
+            ->disableOriginalConstructor()
             ->setMethods(['getReleases', 'getPhpVersionRequirements'])
             ->getMock();
 
@@ -348,6 +354,7 @@ class PhpVersionResolverServiceTest extends TestCase
             ->willReturn($channel);
 
         $distributionApiService = $this->getMockBuilder(DistributionApiService::class)
+            ->disableOriginalConstructor()
             ->setMethods(['getReleases', 'getPhpVersionRequirements'])
             ->getMock();
 

@@ -23,10 +23,21 @@ namespace PrestaShop\Module\AutoUpgrade\Services;
 
 use PrestaShop\Module\AutoUpgrade\Exceptions\DistributionApiException;
 use PrestaShop\Module\AutoUpgrade\Models\PrestashopRelease;
+use PrestaShop\Module\AutoUpgrade\UpgradeTools\Translator;
 
 class DistributionApiService
 {
     public const API_URL = 'https://api.prestashop-project.org';
+    /** @var Translator */
+    private $translator;
+
+    /**
+     * @param Translator $translator
+     */
+    public function __construct(Translator $translator)
+    {
+        $this->translator = $translator;
+    }
 
     /**
      * @throws DistributionApiException
@@ -38,7 +49,7 @@ class DistributionApiService
         $response = @file_get_contents(self::API_URL . '/prestashop');
 
         if (!$response) {
-            throw new DistributionApiException('Error when retrieving Prestashop versions from Distribution api', DistributionApiException::API_NOT_CALLABLE_CODE);
+            throw new DistributionApiException($this->translator->trans('Error when retrieving Prestashop versions from Distribution api'), DistributionApiException::API_NOT_CALLABLE_CODE);
         } else {
             $data = json_decode($response, true);
             foreach ($data as $versionInfo) {
@@ -50,7 +61,7 @@ class DistributionApiService
                 }
             }
         }
-        throw new DistributionApiException('No version match in Distribution api for ' . $targetVersion, DistributionApiException::VERSION_NOT_FOUND_CODE);
+        throw new DistributionApiException($this->translator->trans('No version match in Distribution api for %s', [$targetVersion]), DistributionApiException::VERSION_NOT_FOUND_CODE);
     }
 
     /**
@@ -63,7 +74,7 @@ class DistributionApiService
         $response = @file_get_contents(self::API_URL . '/prestashop');
 
         if (!$response) {
-            throw new DistributionApiException('Error when retrieving Prestashop versions from Distribution api', DistributionApiException::API_NOT_CALLABLE_CODE);
+            throw new DistributionApiException($this->translator->trans('Error when retrieving Prestashop versions from Distribution api'), DistributionApiException::API_NOT_CALLABLE_CODE);
         } else {
             $releases = [];
             $data = json_decode($response, true);

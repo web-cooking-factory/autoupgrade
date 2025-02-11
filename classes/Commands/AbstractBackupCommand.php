@@ -41,8 +41,8 @@ abstract class AbstractBackupCommand extends AbstractCommand
     protected function setupEnvironment(InputInterface $input, OutputInterface $output): void
     {
         parent::setupEnvironment($input, $output);
-        $this->backupFinder = new BackupFinder($this->upgradeContainer->getProperty(UpgradeContainer::BACKUP_PATH));
-        $this->backupManager = new BackupManager($this->backupFinder);
+        $this->backupFinder = new BackupFinder($this->upgradeContainer->getTranslator(), $this->upgradeContainer->getProperty(UpgradeContainer::BACKUP_PATH));
+        $this->backupManager = new BackupManager($this->upgradeContainer->getTranslator(), $this->backupFinder);
     }
 
     /**
