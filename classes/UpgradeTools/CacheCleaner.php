@@ -75,7 +75,7 @@ class CacheCleaner
                 if ($file[0] === '.' || $file === 'index.php') {
                     continue;
                 }
-                $this->container->getFileSystem()->remove($dir . $file);
+                $this->container->getFilesystemAdapter()->clearDirectory($dir . $file, true);
                 $this->logger->debug($this->container->getTranslator()->trans('File %s removed', [$file]));
             }
         }

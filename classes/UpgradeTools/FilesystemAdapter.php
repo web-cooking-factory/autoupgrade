@@ -25,27 +25,24 @@ use FilesystemIterator;
 use RecursiveCallbackFilterIterator;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
+use Symfony\Component\Filesystem\Exception\IOException;
+use Symfony\Component\Filesystem\Filesystem;
 
 class FilesystemAdapter
 {
-    /**
-     * @var FileFilter
-     */
+    /** @var Filesystem */
+    private $filesystem;
+
+    /** @var FileFilter */
     private $fileFilter;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     private $autoupgradeDir;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     private $adminSubDir;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     private $prodRootDir;
 
     /**
@@ -66,11 +63,13 @@ class FilesystemAdapter
     ];
 
     public function __construct(
+        Filesystem $filesystem,
         FileFilter $fileFilter,
         string $autoupgradeDir,
         string $adminSubDir,
         string $prodRootDir
     ) {
+        $this->filesystem = $filesystem;
         $this->fileFilter = $fileFilter;
 
         $this->autoupgradeDir = $autoupgradeDir;
@@ -229,5 +228,38 @@ class FilesystemAdapter
         }
 
         return true;
+    }
+
+    /**
+     * Clears the contents of a given directory, optionally deleting the directory itself.
+     *
+     * @throws IOException if the removal of a file or directory fails
+     *
+     * @param string $folderToClear the absolute path of the directory to be cleared
+     * @param bool $deleteFolder whether to delete the entire directory after clearing its contents
+     *
+     * @return bool returns `true` if any files or the directory itself were deleted, `false` otherwise
+     */
+    public function clearDirectory(string $folderToClear, bool $deleteFolder = false): bool
+    {
+        $hasDeletedItems = false;
+
+        if ($this->filesystem->exists($folderToClear)) {
+            foreach (scandir($folderToClear) as $item) {
+                if ($item !== '.' && $item !== '..' && $item !== 'index.php') {
+                    $path = $folderToClear . DIRECTORY_SEPARATOR . $item;
+                    $this->filesystem->remove($path);
+
+                    $hasDeletedItems = true;
+                }
+            }
+
+            if ($deleteFolder) {
+                $this->filesystem->remove($folderToClear);
+                $hasDeletedItems = true;
+            }
+        }
+
+        return $hasDeletedItems;
     }
 }
