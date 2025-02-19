@@ -29,6 +29,7 @@ $e-logs: ".logs";
   #{$e-tracker} {
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
     height: 100%;
   }
 

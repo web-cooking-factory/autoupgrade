@@ -25,7 +25,10 @@ $e: ".log-progress";
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin-block-end: 0.5rem;
+
+    &:empty {
+      display: none;
+    }
 
     &__status {
       display: flex;
