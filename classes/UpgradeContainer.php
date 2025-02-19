@@ -32,6 +32,7 @@ use PrestaShop\Module\AutoUpgrade\Parameters\ConfigurationValidator;
 use PrestaShop\Module\AutoUpgrade\Parameters\FileStorage;
 use PrestaShop\Module\AutoUpgrade\Parameters\LocalChannelConfigurationValidator;
 use PrestaShop\Module\AutoUpgrade\Parameters\RestoreConfiguration;
+use PrestaShop\Module\AutoUpgrade\Parameters\RestoreConfigurationValidator;
 use PrestaShop\Module\AutoUpgrade\Parameters\UpgradeConfiguration;
 use PrestaShop\Module\AutoUpgrade\Progress\CompletionCalculator;
 use PrestaShop\Module\AutoUpgrade\Repository\LocalArchiveRepository;
@@ -193,6 +194,11 @@ class UpgradeContainer
 
     /** @var LocalChannelConfigurationValidator */
     private $localChannelConfigurationValidator;
+
+    /**
+     * @var RestoreConfigurationValidator
+     */
+    private $restoreConfigurationValidator;
 
     /** @var PrestashopVersionService */
     private $prestashopVersionService;
@@ -902,6 +908,18 @@ class UpgradeContainer
         }
 
         return $this->localChannelConfigurationValidator;
+    }
+
+    public function getRestoreConfigurationValidator(): RestoreConfigurationValidator
+    {
+        if (null === $this->restoreConfigurationValidator) {
+            $this->restoreConfigurationValidator = new RestoreConfigurationValidator(
+                $this->getTranslator(),
+                $this->getBackupFinder()
+            );
+        }
+
+        return $this->restoreConfigurationValidator;
     }
 
     /**

@@ -36,6 +36,8 @@ use PrestaShop\Module\AutoUpgrade\Controller\UpdatePageVersionChoiceController;
 use PrestaShop\Module\AutoUpgrade\Router\Middlewares\BackupChoiceHasBeenMade;
 use PrestaShop\Module\AutoUpgrade\Router\Middlewares\HasBackupAvailable;
 use PrestaShop\Module\AutoUpgrade\Router\Middlewares\LocalChannelXmlAndZipAreValid;
+use PrestaShop\Module\AutoUpgrade\Router\Middlewares\RestoreConfigurationIsValid;
+use PrestaShop\Module\AutoUpgrade\Router\Middlewares\RestoreIsConfigured;
 use PrestaShop\Module\AutoUpgrade\Router\Middlewares\RestoreLogExists;
 use PrestaShop\Module\AutoUpgrade\Router\Middlewares\UpdateIsConfigured;
 use PrestaShop\Module\AutoUpgrade\Router\Middlewares\UpdateLogExists;
@@ -204,6 +206,11 @@ class RoutesConfig
             Routes::RESTORE_PAGE_RESTORE => [
                 'controller' => RestorePageRestoreController::class,
                 'method' => 'index',
+                'middleware' => [
+                    HasBackupAvailable::class,
+                    RestoreIsConfigured::class,
+                    RestoreConfigurationIsValid::class,
+                ],
             ],
             Routes::RESTORE_STEP_RESTORE => [
                 'controller' => RestorePageRestoreController::class,
