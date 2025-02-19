@@ -323,3 +323,7 @@ ALTER TABLE `PREFIX_attachment_lang` MODIFY COLUMN `name` varchar(255) DEFAULT N
 /* Fix category thumbnail images */
 /* https://github.com/PrestaShop/PrestaShop/pull/36877 */
 /* PHP:ps_900_migrate_category_images(); */;
+
+/* Add id_product in customer message table */
+/* https://github.com/PrestaShop/PrestaShop/pull/37861 */
+/* PHP:add_column('customer_message', 'id_product', 'INT UNSIGNED DEFAULT NULL AFTER `id_employee`'); */;
