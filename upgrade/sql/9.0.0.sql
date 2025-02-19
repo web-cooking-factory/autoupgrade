@@ -38,6 +38,9 @@ INSERT INTO `PREFIX_feature_flag` (`name`, `type`, `label_wording`, `label_domai
   ('search_conf', 'env,dotenv,db', 'Search configuration', 'Admin.Advparameters.Feature', 'Enable / Disable the search configuration page.', 'Admin.Advparameters.Help', 0, 'beta'),
   ('merchandise_return', 'env,dotenv,db', 'Merchandise return', 'Admin.Advparameters.Feature', 'Enable / Disable the merchandise return page.', 'Admin.Advparameters.Help', 0, 'beta');
 
+/* Update carrier feature flag to stable, but we don't force enabled by default */
+UPDATE `PREFIX_feature_flag` SET `stability` = 'stable' WHERE `name` = 'carrier';
+
 /* Remove old feature flags from 8.1.x */
 DELETE FROM `PREFIX_feature_flag` WHERE `name` IN ('product_page_v2', 'title', 'order_state', 'multiple_image_format', 'attribute_group');
 
