@@ -282,7 +282,7 @@ class UpgradeContainer
             case self::ARCHIVE_FILEPATH:
                 return $this->getProperty(self::DOWNLOAD_PATH) . DIRECTORY_SEPARATOR . $this->getProperty(self::ARCHIVE_FILENAME);
             case self::PS_VERSION:
-                return $this->getPrestaShopConfiguration()->getPrestaShopVersion();
+                return $this->getCurrentPrestaShopVersion();
             default:
                 return '';
         }
@@ -359,6 +359,15 @@ class UpgradeContainer
         }
 
         return $this->checksumCompare;
+    }
+
+    public function getCurrentPrestaShopVersion(): string
+    {
+        if ($this->getUpdateState()->isInitialized()) {
+            return $this->getUpdateState()->getCurrentVersion();
+        }
+
+        return $this->getPrestaShopConfiguration()->getPrestaShopVersion();
     }
 
     public function getComposerService(): ComposerService
