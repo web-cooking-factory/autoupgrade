@@ -1184,6 +1184,16 @@
         <target>The PrestaShop version in your archive doesn't match the one in XML file. Please fix this issue and try again.</target>
         <note>classes/Parameters/LocalChannelConfigurationValidator.php:179</note>
       </trans-unit>
+      <trans-unit id="a262dcc571fbbaf29e2df23238ce2f89">
+        <source>Backup name is missing</source>
+        <target>Backup name is missing</target>
+        <note>classes/Parameters/RestoreConfigurationValidator.php:82</note>
+      </trans-unit>
+      <trans-unit id="394fde085070ca40c83c0238953f7c08">
+        <source>Backup %s does not exist</source>
+        <target>Backup %s does not exist</target>
+        <note>classes/Parameters/RestoreConfigurationValidator.php:91</note>
+      </trans-unit>
       <trans-unit id="08272c6ff59a6aec084b9a2afc3e9cff">
         <source>Unable to retrieve channel.xml.</source>
         <target>Unable to retrieve channel.xml.</target>
