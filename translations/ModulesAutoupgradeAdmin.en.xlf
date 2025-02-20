@@ -1199,35 +1199,85 @@
         <target>Unable to retrieve channel.xml.</target>
         <note>classes/Upgrader.php:131</note>
       </trans-unit>
-      <trans-unit id="8a862ffce3e06bbe655506fd73fe017c">
-        <source>Something went wrong...</source>
-        <target>Something went wrong...</target>
-        <note>views/templates/pages/errors/404.html.twig:23</note>
+      <trans-unit id="145fb1b6e329f327f5da09ba6843675b">
+        <source>The requested page or resource could not be found. This might be due to:</source>
+        <target>The requested page or resource could not be found. This might be due to:</target>
+        <note>views/templates/pages/errors/404.html.twig:24</note>
       </trans-unit>
-      <trans-unit id="5368f5827707bbb2b9142d25d1f9b493">
-        <source>The module is no longer responding. You can try again in a few moments.</source>
-        <target>The module is no longer responding. You can try again in a few moments.</target>
-        <note>views/templates/pages/errors/500.html.twig:29</note>
+      <trans-unit id="8c3c66ab18ac1d6716a6be5263d06b7d">
+        <source>A broken or outdated link.</source>
+        <target>A broken or outdated link.</target>
+        <note>views/templates/pages/errors/404.html.twig:26</note>
       </trans-unit>
-      <trans-unit id="f685da009437ded5271e842075eaf743">
-        <source>Send error report</source>
-        <target>Send error report</target>
-        <note>views/templates/dialogs/dialog-error-report.html.twig:92</note>
+      <trans-unit id="3b2a346bb68a2fee49d471ea80d05279">
+        <source>The page being moved or deleted.</source>
+        <target>The page being moved or deleted.</target>
+        <note>views/templates/pages/errors/404.html.twig:27</note>
       </trans-unit>
-      <trans-unit id="9af7e43160937bd2ba87e3828a4f90a6">
-        <source>Go back to Update assistant</source>
-        <target>Go back to Update assistant</target>
-        <note>views/templates/pages/errors/404.html.twig:36</note>
+      <trans-unit id="ad16662df4855044f3ab48f0a786186f">
+        <source>A typo in the URL.</source>
+        <target>A typo in the URL.</target>
+        <note>views/templates/pages/errors/404.html.twig:28</note>
       </trans-unit>
-      <trans-unit id="704563ab61497154143cbc7e22e42499">
-        <source>The page you requested cannot be found.</source>
-        <target>The page you requested cannot be found.</target>
-        <note>views/templates/pages/errors/404.html.twig:29</note>
+      <trans-unit id="0030b42e4333ad592ea86064f241c287">
+        <source>It seems there was an issue with the server. This type of error usually happens when:</source>
+        <target>It seems there was an issue with the server. This type of error usually happens when:</target>
+        <note>views/templates/pages/errors/generic.html.twig:40</note>
       </trans-unit>
-      <trans-unit id="fef46e5063ce3dc78b8ae64fa474241d">
-        <source>Exit</source>
-        <target>Exit</target>
-        <note>views/templates/steps/post-restore.html.twig:82</note>
+      <trans-unit id="994b142d19dee01440bbd763dd9dda42">
+        <source>The server is temporarily unavailable.</source>
+        <target>The server is temporarily unavailable.</target>
+        <note>views/templates/pages/errors/generic.html.twig:75</note>
+      </trans-unit>
+      <trans-unit id="014c30741ff5c89cbf8f6e913e1e0848">
+        <source>There's a misconfiguration or unexpected problem on the server.</source>
+        <target>There's a misconfiguration or unexpected problem on the server.</target>
+        <note>views/templates/pages/errors/generic.html.twig:43</note>
+      </trans-unit>
+      <trans-unit id="b984541b3506893e8f0c3f91503dbcfc">
+        <source>It looks like there is no data received from the server. This can happen if:</source>
+        <target>It looks like there is no data received from the server. This can happen if:</target>
+        <note>views/templates/pages/errors/generic.html.twig:73</note>
+      </trans-unit>
+      <trans-unit id="3a70d4513215a450c03e6d61d47ca44a">
+        <source>There's an issue with the network or connection.</source>
+        <target>There's an issue with the network or connection.</target>
+        <note>views/templates/pages/errors/generic.html.twig:76</note>
+      </trans-unit>
+      <trans-unit id="1c59b2d566cf0f4533a11c6aee1efbe0">
+        <source>The request timed out. It seems the connection took too long to respond. This could be due to:</source>
+        <target>The request timed out. It seems the connection took too long to respond. This could be due to:</target>
+        <note>views/templates/pages/errors/generic.html.twig:56</note>
+      </trans-unit>
+      <trans-unit id="041882b89e5cb17a517964726e83d6fe">
+        <source>A slow or unstable internet connection.</source>
+        <target>A slow or unstable internet connection.</target>
+        <note>views/templates/pages/errors/generic.html.twig:58</note>
+      </trans-unit>
+      <trans-unit id="24585fc097351e62dbb51f1b03253c0c">
+        <source>The server is currently busy or unresponsive.</source>
+        <target>The server is currently busy or unresponsive.</target>
+        <note>views/templates/pages/errors/generic.html.twig:59</note>
+      </trans-unit>
+      <trans-unit id="8696259259c446a2a399d95c55769172">
+        <source>Temporary network issues.</source>
+        <target>Temporary network issues.</target>
+        <note>views/templates/pages/errors/generic.html.twig:60</note>
+      </trans-unit>
+      <trans-unit id="46ca90ea04d6e0d0d7d3f4b09b25f4a1">
+        <source>The response received from the server in malformed. This can happen if:</source>
+        <target>The response received from the server in malformed. This can happen if:</target>
+        <note>views/templates/pages/errors/generic.html.twig:65</note>
+      </trans-unit>
+      <trans-unit id="e47f6a28b0c444959e5f81a81becfc1e">
+        <source>The request did not reach the module.</source>
+        <target>The request did not reach the module.</target>
+        <note>views/templates/pages/errors/generic.html.twig:67</note>
+      </trans-unit>
+      <trans-unit id="cdec08a91e267ead2efe690cabf53ab8">
+        <source>There’s an issue processing the response on the app or browser.</source>
+        <target>There’s an issue processing the response on the app or browser.</target>
+        <note>views/templates/pages/errors/generic.html.twig:68</note>
       </trans-unit>
       <trans-unit id="201ad8cac531a92e1ec77ae5c1e7aa20">
         <source>Post-update checklist</source>
@@ -1288,6 +1338,11 @@
         <source>If you can't access your back office, try enabling the debug mode manually in config/defines.inc.php by setting _PS_MODE_DEV_ to true.</source>
         <target>If you can't access your back office, try enabling the debug mode manually in config/defines.inc.php by setting _PS_MODE_DEV_ to true.</target>
         <note>views/templates/steps/post-update.html.twig:81</note>
+      </trans-unit>
+      <trans-unit id="fef46e5063ce3dc78b8ae64fa474241d">
+        <source>Exit</source>
+        <target>Exit</target>
+        <note>views/templates/layouts/error.html.twig:52</note>
       </trans-unit>
       <trans-unit id="4ba42d4d681d17d9bee2f6228c326069">
         <source>Open developer documentation</source>
@@ -1477,7 +1532,7 @@
       <trans-unit id="f915a95e609bbd517a8a1e7bdcceef37">
         <source>Try again</source>
         <target>Try again</target>
-        <note>views/templates/steps/restore.html.twig:60</note>
+        <note>views/templates/steps/restore.html.twig:52</note>
       </trans-unit>
       <trans-unit id="6d7d82d9c1d7f68064d14e673d53eb19">
         <source>Update failed</source>
@@ -1507,7 +1562,7 @@
       <trans-unit id="6890c3f9a573b71dacdcaf6dbcf91bec">
         <source>Retry backup</source>
         <target>Retry backup</target>
-        <note>views/templates/steps/backup.html.twig:79</note>
+        <note>views/templates/steps/backup.html.twig:71</note>
       </trans-unit>
       <trans-unit id="b6cf8e12bbbeee058067ebf8c8dda7e2">
         <source>Delete backup</source>
@@ -1584,6 +1639,11 @@
         <target>You can add details about the error here.</target>
         <note>views/templates/dialogs/dialog-error-report.html.twig:78</note>
       </trans-unit>
+      <trans-unit id="f685da009437ded5271e842075eaf743">
+        <source>Send error report</source>
+        <target>Send error report</target>
+        <note>views/templates/components/form-open-error-report.html.twig:26</note>
+      </trans-unit>
       <trans-unit id="2ca0ff94d146821c12f5340b117b9ecf">
         <source>Start update?</source>
         <target>Start update?</target>
@@ -1638,6 +1698,16 @@
         <source>Save</source>
         <target>Save</target>
         <note>views/templates/form.html.twig:37</note>
+      </trans-unit>
+      <trans-unit id="8a862ffce3e06bbe655506fd73fe017c">
+        <source>Something went wrong...</source>
+        <target>Something went wrong...</target>
+        <note>views/templates/layouts/error.html.twig:33</note>
+      </trans-unit>
+      <trans-unit id="9af7e43160937bd2ba87e3828a4f90a6">
+        <source>Go back to Update assistant</source>
+        <target>Go back to Update assistant</target>
+        <note>views/templates/layouts/error.html.twig:46</note>
       </trans-unit>
       <trans-unit id="fd27020a39b44ef689eb32970c365045">
         <source>Release note</source>
