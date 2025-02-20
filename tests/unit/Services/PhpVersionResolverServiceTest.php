@@ -265,6 +265,18 @@ class PhpVersionResolverServiceTest extends TestCase
                 '7.2.5'
             ),
             new PrestashopRelease(
+                '8.1.9',
+                'stable',
+                '8.1',
+                '7.2.5'
+            ),
+            new PrestashopRelease(
+                '8.2.1',
+                'stable',
+                '8.1',
+                '7.2.5'
+            ),
+            new PrestashopRelease(
                 '9.0.0',
                 'stable',
                 '8.1',

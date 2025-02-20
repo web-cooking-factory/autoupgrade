@@ -164,7 +164,7 @@ class PhpVersionResolverService
             if ($currentPhpVersion >= $versionMinWithoutPatch && $currentPhpVersion <= $versionMaxWithoutPatch) {
                 // verify channel.xml matching
                 $branch = VersionUtils::splitPrestaShopVersion($release->getVersion())['minor'];
-                if (isset($releasesFromChannelFile[$branch])) {
+                if (isset($releasesFromChannelFile[$branch]) && version_compare($releasesFromChannelFile[$branch]->getVersion(), $release->getVersion(), '>=')) {
                     $releaseNote = $releasesFromChannelFile[$branch]->getReleaseNoteUrl();
                     $release->setReleaseNoteUrl($releaseNote);
                     $validReleases[] = $release;
