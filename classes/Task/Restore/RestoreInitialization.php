@@ -110,9 +110,4 @@ class RestoreInitialization extends AbstractTask
 
         return ExitCode::SUCCESS;
     }
-
-    public function init(): void
-    {
-        // Do nothing
-    }
 }

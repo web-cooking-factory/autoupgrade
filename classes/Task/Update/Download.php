@@ -40,6 +40,14 @@ class Download extends AbstractTask
     /**
      * @throws Exception
      */
+    public function init(): void
+    {
+        $this->container->initPrestaShopCore();
+    }
+
+    /**
+     * @throws Exception
+     */
     public function run(): int
     {
         if (!\ConfigurationTest::test_fopen() && !\ConfigurationTest::test_curl()) {

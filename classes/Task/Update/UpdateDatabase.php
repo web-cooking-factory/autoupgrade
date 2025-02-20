@@ -117,7 +117,7 @@ class UpdateDatabase extends AbstractTask
 
         // Migrating settings file
         $this->container->initPrestaShopAutoloader();
-        parent::init();
+        $this->container->initPrestaShopCore();
     }
 
     /**

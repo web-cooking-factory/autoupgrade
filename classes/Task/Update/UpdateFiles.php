@@ -196,6 +196,12 @@ class UpdateFiles extends AbstractTask
             $this->container->getCompletionCalculator()->getBasePercentageOfTask(self::class)
         );
 
+        $updateConfiguration = $this->container->getUpdateConfiguration();
+        if ($updateConfiguration->isChannelLocal()) {
+            $archiveXml = $updateConfiguration->getLocalChannelXml();
+            $this->container->getFileLoader()->addXmlMd5File($this->container->getUpgrader()->getDestinationVersion(), $this->container->getProperty(UpgradeContainer::DOWNLOAD_PATH) . DIRECTORY_SEPARATOR . $archiveXml);
+        }
+
         // Get path to the folder with release we will use to upgrade and check if it's valid
         $newReleasePath = $this->container->getProperty(UpgradeContainer::LATEST_PATH);
         if (!$this->container->getFilesystemAdapter()->isReleaseValid($newReleasePath)) {
@@ -273,10 +279,5 @@ class UpdateFiles extends AbstractTask
         $this->stepDone = false;
 
         return ExitCode::SUCCESS;
-    }
-
-    public function init(): void
-    {
-        $this->setupEnvironment();
     }
 }

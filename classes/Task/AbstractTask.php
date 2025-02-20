@@ -180,26 +180,8 @@ abstract class AbstractTask
         }
     }
 
-    /**
-     * @throws Exception
-     */
     public function init(): void
     {
-        $this->container->initPrestaShopCore();
-        $this->setupEnvironment();
-    }
-
-    /**
-     * @throws Exception
-     */
-    protected function setupEnvironment(): void
-    {
-        $updateConfiguration = $this->container->getUpdateConfiguration();
-
-        if ($this::TASK_TYPE === TaskType::TASK_TYPE_UPDATE && $updateConfiguration->isChannelLocal()) {
-            $archiveXml = $updateConfiguration->getLocalChannelXml();
-            $this->container->getFileLoader()->addXmlMd5File($this->container->getUpgrader()->getDestinationVersion(), $this->container->getProperty(UpgradeContainer::DOWNLOAD_PATH) . DIRECTORY_SEPARATOR . $archiveXml);
-        }
     }
 
     abstract public function run(): int;
