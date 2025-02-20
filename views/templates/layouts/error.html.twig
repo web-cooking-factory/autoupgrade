@@ -29,7 +29,9 @@
 
       <div class="error-page__infos">
         {% block title %}
-          {# Default title can go here, or it can be left empty so that children can override it #}
+          <h2 class="error-page__title">
+            {{ 'Something went wrong...'|trans({}) }}
+          </h2>
         {% endblock %}
 
         {% block description %}
@@ -37,8 +39,18 @@
         {% endblock %}
 
         <div class="error-page__buttons">
-          {% block button %}
-            {# Default button can go here, or it can be left empty so that children can override it #}
+          {% block buttons %}
+            {# Default buttons go here, and children can override them #}
+            <form class="error-page__home-page-form hidden" id="home-page-form" name="home-page-form" data-route-to-submit="{{ exit_to_app_home }}">
+              <button class="btn btn-primary btn-lg" type="submit">
+                {{ 'Go back to Update assistant'|trans({}) }}
+              </button>
+            </form>
+
+            <a class="btn btn-primary btn-lg hidden" id="exit-button" href="{{ exit_to_shop_admin }}">
+              <i class="material-icons">exit_to_app</i>
+              {{ 'Exit'|trans({}) }}
+            </a>
           {% endblock %}
         </div>
       </div>

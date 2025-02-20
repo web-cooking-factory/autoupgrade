@@ -16,17 +16,16 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
  */
+import { AxiosInstance, InternalAxiosRequestConfig } from 'axios';
 
-import ErrorCode500 from "../../../views/templates/pages/errors/500.html.twig";
-
-export default {
-  component: ErrorCode500,
-  title: "Layouts/Errors",
-  args: {
-    psBaseUri: "/",
-    error_code: "500",
-    assets_base_path: "",
+const requestFulfilledInterceptor = (config: InternalAxiosRequestConfig<FormData>) => {
+  if (!config.data) {
+    config.data = new FormData();
   }
+  config.data?.append('dir', window.AutoUpgradeVariables.admin_dir);
+  return config;
 };
 
-export const Error500 = {};
+export const addRequestInterceptor = (axios: AxiosInstance): void => {
+  axios.interceptors.request.use(requestFulfilledInterceptor);
+};

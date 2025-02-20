@@ -1,4 +1,4 @@
-{#**
+/**
  * Copyright since 2007 PrestaShop SA and Contributors
  * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
  *
@@ -15,17 +15,14 @@
  * @author    PrestaShop SA and Contributors <contact@prestashop.com>
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
- *#}
-<div data-component="logs-viewer" class="logs__inner">
-  <form id="form-logs-download-button" data-download-logs-route="{{ downloadLogsRoute }}" hidden>
-    <input type="hidden" name="download-logs-type" value="{{ downloadLogsType }}" />
-  </form>
-  <div class="logs__scroll">
-    <div data-slot-component="scroll" tabindex="0" class="logs__scroll-inner">
-      <div data-slot-component="list" class="logs__list"></div>
-    </div>
-  </div>
-  <div data-slot-component="summary" class="logs__summaries"></div>
-  <div id="{{ download_logs_parent_id }}"></div>
-  <pre id="log-additional-contents" class="hidden"></pre>
-</div>
+ */
+// We don't wait for the call to beforeAll to define window properties.
+window.AutoUpgradeVariables = {
+  token: 'test-token',
+  admin_url: 'http://localhost',
+  admin_dir: '/admin_directory',
+  stepper_parent_id: 'stepper_content',
+  module_version: '7.1.0',
+  anonymous_id: 'b168a116d1a14fda8c21a22c7560fa27ade7dae22641ce9d773be680640dac0f',
+  php_version: '7.4.33'
+};

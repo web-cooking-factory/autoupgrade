@@ -22,6 +22,9 @@ import { parseLogWithSeverity, debounce } from '../utils/logsUtils';
 import DomLifecycle from '../types/DomLifecycle';
 import { logStore } from '../store/LogStore';
 import api from '../api/RequestHandler';
+import { ApiError } from '../types/apiTypes';
+import { isHttpErrorCode } from '../api/axiosError';
+import ErrorPage from '../pages/ErrorPage';
 
 // TODO: clear the debounce on beforeDestroy
 export default class LogsViewer extends ComponentAbstract implements DomLifecycle {
@@ -36,26 +39,31 @@ export default class LogsViewer extends ComponentAbstract implements DomLifecycl
     LOG_BEFORE_SCROLL: 120 // The number of logs to process before automatically scrolling to the bottom.
   };
 
-  #formId = 'form-logs-download-button';
+  readonly #formId = 'form-logs-download-button';
 
-  #templateLogLine = this.queryElement<HTMLTemplateElement>(
+  readonly #templateLogLine = this.queryElement<HTMLTemplateElement>(
     '#log-line',
     'Template log line not found'
   );
 
-  #logsSummary = this.queryElement<HTMLDivElement>(
+  readonly #logsSummary = this.queryElement<HTMLDivElement>(
     '[data-slot-component="summary"]',
     'Logs summary not found'
   );
 
-  #templateSummary = this.queryElement<HTMLTemplateElement>(
+  readonly #templateSummary = this.queryElement<HTMLTemplateElement>(
     '#log-summary',
     'Template summary not found'
   );
 
-  #logsScroll = this.queryElement<HTMLDivElement>(
+  readonly #logsScroll = this.queryElement<HTMLDivElement>(
     '[data-slot-component="scroll"]',
     'Logs scroll not found'
+  );
+
+  readonly #additionalContentsPanel = this.queryElement<HTMLPreElement>(
+    '#log-additional-contents',
+    'Panel of additional contents not found'
   );
 
   get #logsList() {
@@ -109,6 +117,27 @@ export default class LogsViewer extends ComponentAbstract implements DomLifecycl
     });
 
     this.#scrollToBottom();
+  };
+
+  public addError = (error: ApiError): void => {
+    const detailedError = (
+      document.getElementById(ErrorPage.templateId) as HTMLTemplateElement | null
+    )?.content?.querySelector(
+      `.error-page__desc .error-page__desc-${isHttpErrorCode(error.code) ? error.code : error.type}`
+    );
+    if (detailedError) {
+      this.addLogs([`ERROR - ${detailedError.textContent}`.replace(/\n(\s)*$/gm, '')]);
+    }
+    this.addLogs([
+      `ERROR - HTTP request failed. Type: ${error.type ?? 'N/A'} - HTTP Code: ${error.code ?? 'N/A'}`
+    ]);
+
+    // Contents is added on the DOM in a hidden panel in order to:
+    // - Display it if requested in the future
+    // - Have a place to store it for the error report without displaying random contents in the logs
+    if (error.additionalContents) {
+      this.#additionalContentsPanel.innerText = error.additionalContents;
+    }
   };
 
   /**

@@ -17,9 +17,10 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
  */
 import baseApi from './baseApi';
-import { ApiResponse, ApiResponseAction } from '../types/apiTypes';
+import { ApiResponse, ApiResponseAction, ApiResponseUnknown } from '../types/apiTypes';
 import Hydration from '../utils/Hydration';
 import { AxiosError } from 'axios';
+import { toApiError, toApiResponseAction } from './axiosError';
 
 export class RequestHandler {
   #currentRequestAbortController: AbortController | null = null;
@@ -39,19 +40,12 @@ export class RequestHandler {
    * @returns {Promise<void>}
    * @description Sends a POST request to the specified route with optional data and pop state indicator. Cancels any ongoing request before initiating a new one.
    */
-  public async post(
-    route: string,
-    data: FormData = new FormData(),
-    fromPopState?: boolean
-  ): Promise<void> {
+  public async post(route: string, data?: FormData, fromPopState?: boolean): Promise<void> {
     this.abortCurrentPost();
 
     // Create a new AbortController for the current request (used to cancel previous request)
     this.#currentRequestAbortController = new AbortController();
     const { signal } = this.#currentRequestAbortController;
-
-    // Append admin dir required by backend
-    data.append('dir', window.AutoUpgradeVariables.admin_dir);
 
     try {
       const response = await baseApi.post<ApiResponse>('', data, {
@@ -62,16 +56,8 @@ export class RequestHandler {
       const responseData = response.data;
       await this.#handleResponse(responseData, fromPopState);
     } catch (error) {
-      // A couple or errors are returned in an actual response (i.e 404 or 500)
       if (error instanceof AxiosError) {
-        if (error.response?.data) {
-          const responseData = error.response.data;
-          responseData.new_route = 'error-page';
-          await this.#handleResponse(responseData, true);
-        }
-      } else {
-        // TODO: catch errors
-        console.error(error);
+        await this.#handleError(error);
       }
     }
   }
@@ -83,21 +69,19 @@ export class RequestHandler {
    * @description Sends a POST request to the API with the specified action.
    *              Automatically includes the `admin_dir` required by the backend.
    */
-  public async postAction(action: string): Promise<ApiResponseAction | void> {
+  public async postAction(action: string): Promise<ApiResponseAction> {
     const data = new FormData();
-
-    data.append('dir', window.AutoUpgradeVariables.admin_dir);
     data.append('action', action);
 
     try {
-      const response = await baseApi.post('', data);
-      return response.data as ApiResponseAction;
+      const response = await baseApi.post<ApiResponseAction>('', data);
+      return response.data;
     } catch (error: unknown) {
-      if (error instanceof AxiosError && error?.response?.data?.error) {
-        return error.response.data as ApiResponseAction;
+      if (error instanceof AxiosError) {
+        return toApiResponseAction(error);
       }
-      // TODO: catch errors
-      console.error(error);
+
+      throw error;
     }
   }
 
@@ -115,6 +99,10 @@ export class RequestHandler {
     if ('hydration' in response) {
       new Hydration().hydrate(response, fromPopState);
     }
+  }
+
+  async #handleError(error: AxiosError<ApiResponseUnknown, XMLHttpRequest>): Promise<void> {
+    new Hydration().hydrateError(toApiError(error));
   }
 }
 

@@ -21,7 +21,6 @@
 
 namespace PrestaShop\Module\AutoUpgrade\Controller;
 
-use PrestaShop\Module\AutoUpgrade\Router\Routes;
 use Symfony\Component\HttpFoundation\Response;
 
 class Error404Controller extends AbstractPageController
@@ -51,9 +50,6 @@ class Error404Controller extends AbstractPageController
             'assets_base_path' => $this->upgradeContainer->getAssetsEnvironment()->getAssetsBaseUrl($this->request),
 
             'error_code' => Response::HTTP_NOT_FOUND,
-
-            'exit_to_shop_admin' => $this->upgradeContainer->getUrlGenerator()->getShopAdminAbsolutePathFromRequest($this->request),
-            'exit_to_app_home' => Routes::HOME_PAGE,
         ];
     }
 }
