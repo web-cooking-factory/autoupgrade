@@ -330,52 +330,52 @@
       <trans-unit id="52033453d4d673bae012b9c8ccb1e79c">
         <source>An error occurred while backing up. Unable to obtain the schema of %s</source>
         <target>An error occurred while backing up. Unable to obtain the schema of %s</target>
-        <note>classes/Task/Backup/BackupDatabase.php:118</note>
+        <note>classes/Task/Backup/BackupDatabase.php:126</note>
       </trans-unit>
       <trans-unit id="dcb7d833c69d6e0c3f009381c51f898e">
         <source>Error during database backup.</source>
         <target>Error during database backup.</target>
-        <note>classes/Task/Backup/BackupDatabase.php:119</note>
+        <note>classes/Task/Backup/BackupDatabase.php:127</note>
       </trans-unit>
       <trans-unit id="4d4c62fccb481224ff3a5c36b45de3fd">
         <source>%s table has been saved.</source>
         <target>%s table has been saved.</target>
-        <note>classes/Task/Backup/BackupDatabase.php:211</note>
+        <note>classes/Task/Backup/BackupDatabase.php:219</note>
       </trans-unit>
       <trans-unit id="71426d0545181d601dc135b78e74ac8f">
         <source>%s tables have been saved.</source>
         <target>%s tables have been saved.</target>
-        <note>classes/Task/Backup/BackupDatabase.php:231</note>
+        <note>classes/Task/Backup/BackupDatabase.php:239</note>
       </trans-unit>
       <trans-unit id="c2a086cb5c3373d7e11acbd3ace6a553">
         <source>Database backup: %s table(s) left...</source>
         <target>Database backup: %s table(s) left...</target>
-        <note>classes/Task/Backup/BackupDatabase.php:238</note>
+        <note>classes/Task/Backup/BackupDatabase.php:246</note>
       </trans-unit>
       <trans-unit id="10d423ad12429f952b0864b9f506551e">
         <source>Database backup done in filename %s.</source>
         <target>Database backup done in filename %s.</target>
-        <note>classes/Task/Backup/BackupDatabase.php:251</note>
+        <note>classes/Task/Backup/BackupDatabase.php:259</note>
       </trans-unit>
       <trans-unit id="555231214d7c729089e80f561e118f45">
         <source>Backup directory is not writable (%path%).</source>
         <target>Backup directory is not writable (%path%).</target>
-        <note>classes/Task/Backup/BackupDatabase.php:268</note>
+        <note>classes/Task/Backup/BackupDatabase.php:276</note>
       </trans-unit>
       <trans-unit id="d721e1d318aff72741125f97535b8ac7">
         <source>No valid tables were found to back up. Backup of database canceled.</source>
         <target>No valid tables were found to back up. Backup of database canceled.</target>
-        <note>classes/Task/Backup/BackupDatabase.php:284</note>
+        <note>classes/Task/Backup/BackupDatabase.php:292</note>
       </trans-unit>
       <trans-unit id="d12ae4e7f0d20f4a4ca357d48e42877e">
         <source>Backup file %s already exists. Operation aborted.</source>
         <target>Backup file %s already exists. Operation aborted.</target>
-        <note>classes/Task/Backup/BackupDatabase.php:343</note>
+        <note>classes/Task/Backup/BackupDatabase.php:351</note>
       </trans-unit>
       <trans-unit id="d82896159c60199272e5ea481a733eba">
         <source>Unable to create backup database file %s.</source>
         <target>Unable to create backup database file %s.</target>
-        <note>classes/Task/Backup/BackupDatabase.php:357</note>
+        <note>classes/Task/Backup/BackupDatabase.php:365</note>
       </trans-unit>
       <trans-unit id="88b3ca1ea582b35668b5ed49bbf8206b">
         <source>Backup completed successfully.</source>
@@ -680,32 +680,32 @@
       <trans-unit id="ead14b0273e8d6cae7d146130d4be8f6">
         <source>The database has been cleaned.</source>
         <target>The database has been cleaned.</target>
-        <note>classes/Task/Update/CleanDatabase.php:52</note>
+        <note>classes/Task/Update/CleanDatabase.php:53</note>
       </trans-unit>
       <trans-unit id="654f7ceb787fd455c166d5d8744cbf90">
         <source>"/latest" directory has been emptied</source>
         <target>"/latest" directory has been emptied</target>
-        <note>classes/Task/Update/Unzip.php:59</note>
+        <note>classes/Task/Update/Unzip.php:67</note>
       </trans-unit>
       <trans-unit id="01d9d38b1d4d8eff5b530eeecfd3ccd5">
         <source>Extraction directory %s is not writable.</source>
         <target>Extraction directory %s is not writable.</target>
-        <note>classes/Task/Update/Unzip.php:64</note>
+        <note>classes/Task/Update/Unzip.php:72</note>
       </trans-unit>
       <trans-unit id="69ae4bbd4b14ae388e4e3882945a542e">
         <source>Unable to extract %filepath% file into %destination% folder...</source>
         <target>Unable to extract %filepath% file into %destination% folder...</target>
-        <note>classes/Task/Update/Unzip.php:99</note>
+        <note>classes/Task/Update/Unzip.php:107</note>
       </trans-unit>
       <trans-unit id="5d3c14ccb814427455842b838bbd6f21">
         <source>No prestashop/ folder found in the ZIP file. Aborting.</source>
         <target>No prestashop/ folder found in the ZIP file. Aborting.</target>
-        <note>classes/Task/Update/Unzip.php:113</note>
+        <note>classes/Task/Update/Unzip.php:121</note>
       </trans-unit>
       <trans-unit id="c308874e9b5347709e9dc8bad11d8198">
         <source>File extraction complete. Now updating files...</source>
         <target>File extraction complete. Now updating files...</target>
-        <note>classes/Task/Update/Unzip.php:127</note>
+        <note>classes/Task/Update/Unzip.php:135</note>
       </trans-unit>
       <trans-unit id="d3b9b6cf6979d03762f425fb7d0d4e12">
         <source>All files updated. Now updating database...</source>
@@ -770,32 +770,32 @@
       <trans-unit id="20aed4fb9f6ee15bc601227bbfb85acd">
         <source>Could not assert the folder %s contains a valid PrestaShop release, exiting.</source>
         <target>Could not assert the folder %s contains a valid PrestaShop release, exiting.</target>
-        <note>classes/Task/Update/UpdateFiles.php:202</note>
+        <note>classes/Task/Update/UpdateFiles.php:208</note>
       </trans-unit>
       <trans-unit id="312d54356778124e7ad6d8c7be6ff1a0">
         <source>A file may be missing, or the release is stored in a subfolder by mistake.</source>
         <target>A file may be missing, or the release is stored in a subfolder by mistake.</target>
-        <note>classes/Task/Update/UpdateFiles.php:203</note>
+        <note>classes/Task/Update/UpdateFiles.php:209</note>
       </trans-unit>
       <trans-unit id="fa5d2fc42275582a8b7be9935084ad45">
         <source>Generate diff file list between %s and %s.</source>
         <target>Generate diff file list between %s and %s.</target>
-        <note>classes/Task/Update/UpdateFiles.php:224</note>
+        <note>classes/Task/Update/UpdateFiles.php:230</note>
       </trans-unit>
       <trans-unit id="a845839e72a2af510180c93273119199">
         <source>Unable to generate diff file list between %s and %s.</source>
         <target>Unable to generate diff file list between %s and %s.</target>
-        <note>classes/Task/Update/UpdateFiles.php:227</note>
+        <note>classes/Task/Update/UpdateFiles.php:233</note>
       </trans-unit>
       <trans-unit id="b66f7c9b911acb4711e96eb7a7605bfb">
         <source>Unable to find files to update.</source>
         <target>Unable to find files to update.</target>
-        <note>classes/Task/Update/UpdateFiles.php:266</note>
+        <note>classes/Task/Update/UpdateFiles.php:272</note>
       </trans-unit>
       <trans-unit id="ee2e293c4bce5a37e5925743d549af8e">
         <source>%s files will be updated.</source>
         <target>%s files will be updated.</target>
-        <note>classes/Task/Update/UpdateFiles.php:271</note>
+        <note>classes/Task/Update/UpdateFiles.php:277</note>
       </trans-unit>
       <trans-unit id="64d7e13ba8bcd0c4a6977cf271577a03">
         <source>Shop updated to %s, but some warnings have been found.</source>
@@ -820,42 +820,42 @@
       <trans-unit id="fb1ca1f5f3eb5a2ca85201f449525527">
         <source>You need allow_url_fopen or cURL enabled for automatic download to work. You can also manually upload it in filepath %s.</source>
         <target>You need allow_url_fopen or cURL enabled for automatic download to work. You can also manually upload it in filepath %s.</target>
-        <note>classes/Task/Update/Download.php:46</note>
+        <note>classes/Task/Update/Download.php:54</note>
       </trans-unit>
       <trans-unit id="f31c50f6d0edbbb94aa24943b118e316">
         <source>Downloading from %s</source>
         <target>Downloading from %s</target>
-        <note>classes/Task/Update/Download.php:56</note>
+        <note>classes/Task/Update/Download.php:64</note>
       </trans-unit>
       <trans-unit id="73227d741d23c1c6c0ae027b2dbc9e73">
         <source>File will be saved in %s</source>
         <target>File will be saved in %s</target>
-        <note>classes/Task/Update/Download.php:57</note>
+        <note>classes/Task/Update/Download.php:65</note>
       </trans-unit>
       <trans-unit id="53be0a7251b3bd0de81f488687bc0464">
         <source>Download directory has been emptied</source>
         <target>Download directory has been emptied</target>
-        <note>classes/Task/Update/Download.php:68</note>
+        <note>classes/Task/Update/Download.php:76</note>
       </trans-unit>
       <trans-unit id="5385901e5bed459563860e2f08a90a1c">
         <source>Download directory %s is not writable.</source>
         <target>Download directory %s is not writable.</target>
-        <note>classes/Task/Update/Download.php:75</note>
+        <note>classes/Task/Update/Download.php:83</note>
       </trans-unit>
       <trans-unit id="a55401a11251f53f612e950d4115e116">
         <source>Download complete. Now extracting...</source>
         <target>Download complete. Now extracting...</target>
-        <note>classes/Task/Update/Download.php:98</note>
+        <note>classes/Task/Update/Download.php:106</note>
       </trans-unit>
       <trans-unit id="2d9a3f4a92c008b32903541e9af8aff0">
         <source>Download complete but MD5 sum does not match (%s).</source>
         <target>Download complete but MD5 sum does not match (%s).</target>
-        <note>classes/Task/Update/Download.php:100</note>
+        <note>classes/Task/Update/Download.php:108</note>
       </trans-unit>
       <trans-unit id="31cc7d01dc7b85c42d9eb731b1060af7">
         <source>The .zip archive could not be downloaded. The update is currently impossible. Please try again later.</source>
         <target>The .zip archive could not be downloaded. The update is currently impossible. Please try again later.</target>
-        <note>classes/Task/Update/Download.php:104</note>
+        <note>classes/Task/Update/Download.php:112</note>
       </trans-unit>
       <trans-unit id="4d46d96c1ea641735ee0c26c6381c75e">
         <source>API keys not present in parameters, generating</source>
