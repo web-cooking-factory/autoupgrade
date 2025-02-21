@@ -149,7 +149,7 @@ class UpgradeSelfCheck
         $errors = [
             self::ROOT_DIRECTORY_NOT_WRITABLE => !$this->isRootDirectoryWritable(),
             self::ADMIN_UPGRADE_DIRECTORY_NOT_WRITABLE => !$this->isAdminAutoUpgradeDirectoryWritable(),
-             self::F_OPEN_AND_CURL_DISABLED => !$this->isFOpenOrCurlEnabled(),
+            self::F_OPEN_AND_CURL_DISABLED => !$this->isFOpenOrCurlEnabled(),
             self::ZIP_DISABLED => !$this->isZipEnabled(),
             self::MAINTENANCE_MODE_DISABLED => !$this->isLocalEnvironment() && !$this->isShopDeactivated(),
             self::CACHE_ENABLED => !$this->isCacheDisabled(),
