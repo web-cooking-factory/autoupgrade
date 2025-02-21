@@ -753,7 +753,6 @@ class UpgradeSelfCheck
         );
     }
 
-
     private function checkMaxExecutionTime(): int
     {
         return (int) @ini_get('max_execution_time');
