@@ -30,6 +30,7 @@ use PrestaShop\Module\AutoUpgrade\Log\WebLogger;
 use PrestaShop\Module\AutoUpgrade\Parameters\ConfigurationStorage;
 use PrestaShop\Module\AutoUpgrade\Parameters\ConfigurationValidator;
 use PrestaShop\Module\AutoUpgrade\Parameters\FileStorage;
+use PrestaShop\Module\AutoUpgrade\Parameters\LanguageConfiguration;
 use PrestaShop\Module\AutoUpgrade\Parameters\LocalChannelConfigurationValidator;
 use PrestaShop\Module\AutoUpgrade\Parameters\RestoreConfiguration;
 use PrestaShop\Module\AutoUpgrade\Parameters\RestoreConfigurationValidator;
@@ -134,6 +135,9 @@ class UpgradeContainer
 
     /** @var RestoreConfiguration */
     private $restoreConfiguration;
+
+    /** @var LanguageConfiguration */
+    private $languageConfiguration;
 
     /** @var FilesystemAdapter */
     private $filesystemAdapter;
@@ -651,10 +655,18 @@ class UpgradeContainer
     {
         if (null === $this->translator) {
             $locale = null;
+            $languageConfiguration = $this->getLanguageConfiguration();
             // @phpstan-ignore booleanAnd.rightAlwaysTrue (If PrestaShop core is not instantiated properly, do not try to translate)
             if (method_exists('\Context', 'getContext') && \Context::getContext()->language) {
-                $locale = \Context::getContext()->language->iso_code;
+                $newConfiguration = [
+                    LanguageConfiguration::ISO_LANGUAGES => \Context::getContext()->language->iso_code,
+                ];
+
+                $languageConfiguration->merge($newConfiguration);
+                $this->configurationStorage->save($languageConfiguration);
             }
+
+            $locale = $languageConfiguration->getIsoLanguages();
 
             $this->translator = new Translator(
                 $this->getProperty(self::PS_ROOT_PATH) . DIRECTORY_SEPARATOR . 'modules' . DIRECTORY_SEPARATOR . 'autoupgrade' . DIRECTORY_SEPARATOR . 'translations' . DIRECTORY_SEPARATOR,
@@ -752,6 +764,15 @@ class UpgradeContainer
         }
 
         return $this->restoreConfiguration;
+    }
+
+    public function getLanguageConfiguration(): LanguageConfiguration
+    {
+        if (null === $this->languageConfiguration) {
+            $this->languageConfiguration = $this->getConfigurationStorage()->loadLanguageConfiguration();
+        }
+
+        return $this->languageConfiguration;
     }
 
     /**
