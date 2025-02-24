@@ -22,6 +22,11 @@ namespace PrestaShop\Module\AutoUpgrade\Parameters;
 
 use Doctrine\Common\Collections\ArrayCollection;
 
+/**
+ * Contains the language configuration.
+ *
+ * @extends ArrayCollection<string, mixed>
+ */
 class LanguageConfiguration extends ArrayCollection
 {
     const ISO_LANGUAGES = 'ISO_LANGUAGES';
