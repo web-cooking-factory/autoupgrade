@@ -17,7 +17,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
  *#}
 <form
-  class="form-group backup-selection"
+  class="form-group backup-selection mb-0"
   action=""
   data-route-to-save="{{ form_route_to_save }}"
   data-route-to-submit-restore="{{ form_route_to_submit_restore }}"
@@ -25,31 +25,12 @@
   id="{{ form_backup_selection_name }}"
   name="{{ form_backup_selection_name }}"
 >
-  <div class="backup-selection__infos">
-    <label for="{{ form_fields.BACKUP_NAME }}">
-      {{ 'Select the backup you want to restore to'|trans({}) }}
-    </label>
-
-    <select id="{{ form_fields.BACKUP_NAME }}" name="{{ form_fields.BACKUP_NAME }}">
-      {% for backup in backups_available %}
-        <option
-                value="{{ backup.filename }}"
-                {% if backup.filename == current_backup %}
-                  selected
-                {% endif %}
-        >
-            {{ backup.datetime }} &nbsp;-&nbsp; {{ backup.filename }}
-        </option>
-      {% endfor %}
-    </select>
-  </div>
-  <button
-    class="btn btn-link backup-selection__delete"
-    name="action"
-    type="submit"
-    value="delete"
-  >
-    {{ 'Delete selection'|trans({}) }}
-    <i class="material-icons">delete</i>
-  </button>
+  {% include "@ModuleAutoUpgrade/components/render-backup-selection.html.twig" with {
+    id: form_fields.BACKUP_NAME,
+    name: form_fields.BACKUP_NAME,
+    title: 'Select the backup you want to restore to'|trans({}),
+    choices: backups_available,
+    value: current_backup,
+    backup_selection: true,
+  } %}
 </form>

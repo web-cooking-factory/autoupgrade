@@ -62,6 +62,40 @@ $e: ".render-field";
       align-items: center;
     }
 
+    // Backup selection variant
+    &--backup-selection {
+      display: block;
+      border-block-end: 0;
+      margin-block-end: 0;
+      padding-block-end: 0;
+
+      #{$e}__backup-selection-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: flex-end;
+      }
+
+      #{$e}__backup-selection-select {
+        flex-basis: 70%;
+        flex-grow: 1;
+
+        select {
+          margin-block-end: 0;
+        }
+      }
+
+      #{$e}__backup-selection-delete {
+        padding-inline: 0.5rem;
+        text-decoration: none;
+
+        &:hover {
+          color: var(--#{$ua-prefix}red-500);
+          text-decoration: none;
+        }
+      }
+    }
+
     @container render-field (max-width: 400px) {
       &__infos {
         flex-basis: 100%;
