@@ -627,14 +627,14 @@
         <target state="final">Mise à jour de la base de données en cours. %d requêtes restantes</target>
         <note>classes/Task/Update/UpdateDatabase.php:59</note>
       </trans-unit>
-      <trans-unit id="9f50aa4bbbbb4463ece530c2c72cb8c0">
+      <trans-unit id="9f50aa4bbbbb4463ece530c2c72cb8c0" approved="yes">
         <source>Error during database update. You may need to restore your database.</source>
-        <target state="needs-translation">Error during database update. You may need to restore your database.</target>
+        <target state="final">Erreur lors de la mise à jour de la base de données. Vous devrez peut-être restaurer votre base de données.</target>
         <note>classes/Task/Update/UpdateDatabase.php:80</note>
       </trans-unit>
-      <trans-unit id="b4d58e71eb2164fb3d7729f24b745083">
+      <trans-unit id="b4d58e71eb2164fb3d7729f24b745083" approved="yes">
         <source>Database updated. Now updating your Addons modules...</source>
-        <target state="needs-translation">Database updated. Now updating your Addons modules...</target>
+        <target state="final">Base de données mise à jour. Mise à jour de vos modules Addons en cours...</target>
         <note>classes/Task/Update/UpdateDatabase.php:87</note>
       </trans-unit>
       <trans-unit id="badf6aad60d4a95b698028bc55aa3347" approved="yes">
@@ -667,9 +667,9 @@
         <target state="final">Garder les modules non natifs activés</target>
         <note>classes/Task/Update/UpdateDatabase.php:150</note>
       </trans-unit>
-      <trans-unit id="a6f9db17fdafdd976f34333d8a217531">
+      <trans-unit id="a6f9db17fdafdd976f34333d8a217531" approved="yes">
         <source>Version to install is too old. Current version: %oldversion%. Version to install: %newversion%.</source>
-        <target state="needs-translation">Version to install is too old. Current version: %oldversion%. Version to install: %newversion%.</target>
+        <target state="final">La version à installer est trop ancienne. Version actuelle : %oldversion%. Version à installer : %newversion%.</target>
         <note>classes/Task/Update/UpdateDatabase.php:167</note>
       </trans-unit>
       <trans-unit id="37ce0f29c7377c827e7247fe5645a782" approved="yes">
@@ -703,19 +703,19 @@
 </target>
         <note>classes/Task/Update/Unzip.php:121</note>
       </trans-unit>
-      <trans-unit id="c308874e9b5347709e9dc8bad11d8198">
+      <trans-unit id="c308874e9b5347709e9dc8bad11d8198" approved="yes">
         <source>File extraction complete. Now updating files...</source>
-        <target state="needs-translation">File extraction complete. Now updating files...</target>
+        <target state="final">Extraction du fichier terminée. Mise à jour des fichiers en cours...</target>
         <note>classes/Task/Update/Unzip.php:135</note>
       </trans-unit>
-      <trans-unit id="d3b9b6cf6979d03762f425fb7d0d4e12">
+      <trans-unit id="d3b9b6cf6979d03762f425fb7d0d4e12" approved="yes">
         <source>All files updated. Now updating database...</source>
-        <target state="needs-translation">All files updated. Now updating database...</target>
+        <target state="final">Tous les fichiers sont à jour. Mise à jour de la base de données en cours...</target>
         <note>classes/Task/Update/UpdateFiles.php:67</note>
       </trans-unit>
-      <trans-unit id="46cf45a00b2e8abfe1c5635601ff2e48">
+      <trans-unit id="46cf45a00b2e8abfe1c5635601ff2e48" approved="yes">
         <source>Error when trying to update file %s.</source>
-        <target state="needs-translation">Error when trying to update file %s.</target>
+        <target state="final">Erreur lors de la tentative de mise à jour du fichier %s.</target>
         <note>classes/Task/Update/UpdateFiles.php:78</note>
       </trans-unit>
       <trans-unit id="13c5f7e7473980468149551b4df7da8c" approved="yes">
@@ -728,9 +728,9 @@
         <target state="final">%s ignoré</target>
         <note>classes/Task/Update/UpdateFiles.php:117</note>
       </trans-unit>
-      <trans-unit id="ba4bea05b16daf8e0652a6048cf741c6">
+      <trans-unit id="ba4bea05b16daf8e0652a6048cf741c6" approved="yes">
         <source>File %1$s has been deleted.</source>
-        <target state="needs-translation">File %1$s has been deleted.</target>
+        <target state="final">Le fichier %1$s a été supprimé.</target>
         <note>classes/Task/Update/UpdateFiles.php:125</note>
       </trans-unit>
       <trans-unit id="cbfafdaa2e7968a86bd6a437027edfea" approved="yes">
@@ -793,9 +793,9 @@
         <target state="final">Impossible de trouver les fichiers à mettre à jour.</target>
         <note>classes/Task/Update/UpdateFiles.php:272</note>
       </trans-unit>
-      <trans-unit id="ee2e293c4bce5a37e5925743d549af8e">
+      <trans-unit id="ee2e293c4bce5a37e5925743d549af8e" approved="yes">
         <source>%s files will be updated.</source>
-        <target state="needs-translation">%s files will be updated.</target>
+        <target state="final">%s fichiers seront mis à jour.</target>
         <note>classes/Task/Update/UpdateFiles.php:277</note>
       </trans-unit>
       <trans-unit id="64d7e13ba8bcd0c4a6977cf271577a03" approved="yes">
@@ -803,9 +803,9 @@
         <target state="final">Boutique mise à jour vers %s, mais certains avertissements ont été trouvés.</target>
         <note>classes/Task/Update/UpdateComplete.php:54</note>
       </trans-unit>
-      <trans-unit id="f14a0e3c163ebd24ef367ac1079cf000">
+      <trans-unit id="f14a0e3c163ebd24ef367ac1079cf000" approved="yes">
         <source>Shop updated to %s. Congratulations! You can now reactivate your shop.</source>
-        <target state="needs-translation">Shop updated to %s. Congratulations! You can now reactivate your shop.</target>
+        <target state="final">Boutique mise à jour vers %s. Félicitations ! Vous pouvez maintenant réactiver votre boutique.</target>
         <note>classes/Task/Update/UpdateComplete.php:55</note>
       </trans-unit>
       <trans-unit id="75802ba44ba3369defd92ef897bf2f21" approved="yes">
@@ -853,9 +853,9 @@
         <target state="final">Téléchargement terminé, mais le calcul MD5 ne correspond pas (%s).</target>
         <note>classes/Task/Update/Download.php:108</note>
       </trans-unit>
-      <trans-unit id="31cc7d01dc7b85c42d9eb731b1060af7">
+      <trans-unit id="31cc7d01dc7b85c42d9eb731b1060af7" approved="yes">
         <source>The .zip archive could not be downloaded. The update is currently impossible. Please try again later.</source>
-        <target state="needs-translation">The .zip archive could not be downloaded. The update is currently impossible. Please try again later.</target>
+        <target state="final">L'archive .zip n'a pas pu être téléchargée. La mise à jour est actuellement impossible. Veuillez réessayer ultérieurement.</target>
         <note>classes/Task/Update/Download.php:112</note>
       </trans-unit>
       <trans-unit id="4d46d96c1ea641735ee0c26c6381c75e" approved="yes">
@@ -903,14 +903,14 @@
         <target state="final">Exécuter des requêtes génériques</target>
         <note>classes/UpgradeTools/CoreUpgrader/CoreUpgrader.php:118</note>
       </trans-unit>
-      <trans-unit id="589998cc1fe1a29f99a7bac84b1c121f">
+      <trans-unit id="589998cc1fe1a29f99a7bac84b1c121f" approved="yes">
         <source>Database update OK</source>
-        <target state="needs-translation">Database update OK</target>
+        <target state="final">Mise à jour de la base de données OK</target>
         <note>classes/UpgradeTools/CoreUpgrader/CoreUpgrader.php:121</note>
       </trans-unit>
-      <trans-unit id="947d41a2e41f66e6a8581d2ab5726685">
+      <trans-unit id="947d41a2e41f66e6a8581d2ab5726685" approved="yes">
         <source>Updating languages</source>
-        <target state="needs-translation">Updating languages</target>
+        <target state="final">Mise à jour des langues</target>
         <note>classes/UpgradeTools/CoreUpgrader/CoreUpgrader.php:123</note>
       </trans-unit>
       <trans-unit id="88bbbc84f51424b4b0c6da6aec2c2154" approved="yes">
@@ -933,14 +933,14 @@
         <target state="final">Désactivation des overrides</target>
         <note>classes/UpgradeTools/CoreUpgrader/CoreUpgrader.php:135</note>
       </trans-unit>
-      <trans-unit id="4afddec024bf8a4d5170ded7dc6c5665">
+      <trans-unit id="4afddec024bf8a4d5170ded7dc6c5665" approved="yes">
         <source>Warning detected during update.</source>
-        <target state="needs-translation">Warning detected during update.</target>
+        <target state="final">Avertissement détecté lors de la mise à jour.</target>
         <note>classes/UpgradeTools/CoreUpgrader/CoreUpgrader.php:144</note>
       </trans-unit>
-      <trans-unit id="a5b60046bfbbe89f0598a1a3b48e4bab">
+      <trans-unit id="a5b60046bfbbe89f0598a1a3b48e4bab" approved="yes">
         <source>Database update completed</source>
-        <target state="needs-translation">Database update completed</target>
+        <target state="final">Mise à jour de la base de données terminée</target>
         <note>classes/UpgradeTools/CoreUpgrader/CoreUpgrader.php:146</note>
       </trans-unit>
       <trans-unit id="f25792b5b08a78dd01810297d219c10c" approved="yes">
@@ -958,19 +958,19 @@
         <target state="final">Impossible de trouver les fichiers de mise à jour SQL. Veuillez vérifier que le dossier %s n'est pas vide.</target>
         <note>classes/UpgradeTools/CoreUpgrader/CoreUpgrader.php:283</note>
       </trans-unit>
-      <trans-unit id="10cdbccd344337ec910129a02cdfaac2">
+      <trans-unit id="10cdbccd344337ec910129a02cdfaac2" approved="yes">
         <source>Migration file: %s, Query: %s</source>
-        <target state="needs-translation">Migration file: %s, Query: %s</target>
+        <target state="final">Fichier de migration : %s, Requête : %s</target>
         <note>classes/UpgradeTools/CoreUpgrader/CoreUpgrader.php:498</note>
       </trans-unit>
-      <trans-unit id="bd996c5d2ed7b7ff38aef7377fc28b8a">
+      <trans-unit id="bd996c5d2ed7b7ff38aef7377fc28b8a" approved="yes">
         <source>SQL %s table has been dropped.</source>
-        <target state="needs-translation">SQL %s table has been dropped.</target>
+        <target state="final">La table SQL %s a été supprimée.</target>
         <note>classes/UpgradeTools/CoreUpgrader/CoreUpgrader.php:483</note>
       </trans-unit>
-      <trans-unit id="a5f51c587cf3395667758cbdb04a5e0b">
+      <trans-unit id="a5f51c587cf3395667758cbdb04a5e0b" approved="yes">
         <source>The execution of the query failed: %s, %s</source>
-        <target state="needs-translation">The execution of the query failed: %s, %s</target>
+        <target state="final">L'exécution de la requête a échoué : %s, %s</target>
         <note>classes/UpgradeTools/CoreUpgrader/CoreUpgrader.php:497</note>
       </trans-unit>
       <trans-unit id="6a1fd2698386e16037dcf5981add2506">
@@ -1065,9 +1065,9 @@
         <target state="needs-translation">Directory "%s" does not exist and cannot be emptied.</target>
         <note>classes/UpgradeTools/CacheCleaner.php:71</note>
       </trans-unit>
-      <trans-unit id="1ef478938e58dcb132dc969cda209fcb">
+      <trans-unit id="1ef478938e58dcb132dc969cda209fcb" approved="yes">
         <source>File %s removed</source>
-        <target state="needs-translation">File %s removed</target>
+        <target state="final">Fichier %s supprimé</target>
         <note>classes/UpgradeTools/CacheCleaner.php:79</note>
       </trans-unit>
       <trans-unit id="ffecf7f010dec7170bcc2749d49c41ff">
