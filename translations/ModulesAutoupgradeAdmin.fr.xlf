@@ -973,9 +973,9 @@
         <target state="final">L'exécution de la requête a échoué : %s, %s</target>
         <note>classes/UpgradeTools/CoreUpgrader/CoreUpgrader.php:497</note>
       </trans-unit>
-      <trans-unit id="6a1fd2698386e16037dcf5981add2506">
+      <trans-unit id="6a1fd2698386e16037dcf5981add2506" approved="yes">
         <source>SQL %s %s in %s: %s</source>
-        <target state="needs-translation">SQL %s %s in %s: %s</target>
+        <target state="final">SQL %s %s dans %s : %s</target>
         <note>classes/UpgradeTools/CoreUpgrader/CoreUpgrader.php:502</note>
       </trans-unit>
       <trans-unit id="53983059bf39e1325bba11081ca40e97" approved="yes">
@@ -988,36 +988,36 @@
         <target state="final">Retour au thème par défaut.</target>
         <note>classes/UpgradeTools/CoreUpgrader/CoreUpgrader.php:749</note>
       </trans-unit>
-      <trans-unit id="475d2ad61e3486ec4af224c5c701b668">
+      <trans-unit id="475d2ad61e3486ec4af224c5c701b668" approved="yes">
         <source>No RTL language detected, skipping RTL file update.</source>
-        <target state="needs-translation">No RTL language detected, skipping RTL file update.</target>
+        <target state="final">Aucune langue RTL détectée, mise à jour du fichier RTL ignorée.</target>
         <note>classes/UpgradeTools/CoreUpgrader/CoreUpgrader.php:766</note>
       </trans-unit>
-      <trans-unit id="865502b07194399bc188582c6a3e266c">
+      <trans-unit id="865502b07194399bc188582c6a3e266c" approved="yes">
         <source>Update the RTL files of back-office themes.</source>
-        <target state="needs-translation">Update the RTL files of back-office themes.</target>
+        <target state="final">Mise à jour des fichiers RTL des thèmes back-office.</target>
         <note>classes/UpgradeTools/CoreUpgrader/CoreUpgrader.php:773</note>
       </trans-unit>
-      <trans-unit id="751c05018f86933c195f46ec3ab55bf8">
+      <trans-unit id="751c05018f86933c195f46ec3ab55bf8" approved="yes">
         <source>Update the RTL files of front-office themes.</source>
-        <target state="needs-translation">Update the RTL files of front-office themes.</target>
+        <target state="final">Mise à jour des fichiers RTL des thèmes front-office.</target>
         <note>classes/UpgradeTools/CoreUpgrader/CoreUpgrader.php:794</note>
       </trans-unit>
-      <trans-unit id="3beb9b10d6bd297fde87d3ba5163975d">
+      <trans-unit id="3beb9b10d6bd297fde87d3ba5163975d" approved="yes">
         <source>PHP Impossible to generate RTL files for theme %s: %s</source>
-        <target state="needs-translation">PHP Impossible to generate RTL files for theme %s: %s</target>
+        <target state="final">PHP Impossible de générer des fichiers RTL pour le thème %s : %s</target>
         <note>classes/UpgradeTools/CoreUpgrader/CoreUpgrader.php:811</note>
       </trans-unit>
-      <trans-unit id="061a241a2e3b54e5546a13792de11b82">
+      <trans-unit id="061a241a2e3b54e5546a13792de11b82" approved="yes">
         <source>An error was raised when warming up the core cache: 
  %s</source>
-        <target state="needs-translation">An error was raised when warming up the core cache: 
+        <target state="final">Une erreur s'est produite lors du préchargement du cache core : 
  %s</target>
         <note>classes/UpgradeTools/CoreUpgrader/CoreUpgrader.php:863</note>
       </trans-unit>
-      <trans-unit id="068cba215a30b9ffbd27e680475be575">
+      <trans-unit id="068cba215a30b9ffbd27e680475be575" approved="yes">
         <source>Core cache has been generated to avoid dependency conflicts.</source>
-        <target state="needs-translation">Core cache has been generated to avoid dependency conflicts.</target>
+        <target state="final">Le cache du core a été généré pour éviter les conflits de dépendances.</target>
         <note>classes/UpgradeTools/CoreUpgrader/CoreUpgrader.php:865</note>
       </trans-unit>
       <trans-unit id="b5ffb77b13ab03298982a49842ce78aa" approved="yes">
@@ -1045,9 +1045,9 @@
         <target state="final">Impossible de générer les modèles d'e-mail : %s.</target>
         <note>classes/UpgradeTools/CoreUpgrader/CoreUpgrader80.php:105</note>
       </trans-unit>
-      <trans-unit id="3188ac0ee6355c23c3b26c3b5e71f3dd">
+      <trans-unit id="3188ac0ee6355c23c3b26c3b5e71f3dd" approved="yes">
         <source>File %s does not exist, merge skipped.</source>
-        <target state="needs-translation">File %s does not exist, merge skipped.</target>
+        <target state="final">Le fichier %s n'existe pas, la fusion a été ignorée.</target>
         <note>classes/UpgradeTools/Translation.php:141</note>
       </trans-unit>
       <trans-unit id="9e25d028554081cd5afb26eaf99dbd9e">
