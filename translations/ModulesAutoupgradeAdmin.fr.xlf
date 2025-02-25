@@ -1150,9 +1150,9 @@
         <target state="needs-translation">Unknown channel %s</target>
         <note>classes/Parameters/ConfigurationValidator.php:79</note>
       </trans-unit>
-      <trans-unit id="a1e2f27f691acb7eff72046d0c6d15b9">
+      <trans-unit id="a1e2f27f691acb7eff72046d0c6d15b9" approved="yes">
         <source>No zip archive provided</source>
-        <target state="needs-translation">No zip archive provided</target>
+        <target state="final">Aucune archive zip fournie</target>
         <note>classes/Parameters/ConfigurationValidator.php:88</note>
       </trans-unit>
       <trans-unit id="08ecdfa1e85ff7b6cc146b6a61690840">
