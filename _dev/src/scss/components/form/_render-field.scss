@@ -65,9 +65,9 @@ $e: ".render-field";
     // Backup selection variant
     &--backup-selection {
       display: block;
-      border-block-end: 0;
-      margin-block-end: 0;
       padding-block-end: 0;
+      margin-block-end: 0;
+      border-block-end: 0;
 
       #{$e}__backup-selection-wrapper {
         display: flex;
