@@ -1095,14 +1095,14 @@
         <target state="needs-translation">Module %s version could not be updated. Database might be unavailable.</target>
         <note>classes/UpgradeTools/Module/ModuleMigration.php:132</note>
       </trans-unit>
-      <trans-unit id="094e7ea97940f72a1decb2dc4d79ebfd">
+      <trans-unit id="094e7ea97940f72a1decb2dc4d79ebfd" approved="yes">
         <source>Could not write temporary file %s.</source>
-        <target state="needs-translation">Could not write temporary file %s.</target>
+        <target state="final">Impossible d'écrire le fichier temporaire %s.</target>
         <note>classes/UpgradeTools/Module/ModuleMigration.php:161</note>
       </trans-unit>
-      <trans-unit id="911a8f7a6f03e27072bf825463ac5a7e">
+      <trans-unit id="911a8f7a6f03e27072bf825463ac5a7e" approved="yes">
         <source>Method %s does not exist. Module %s disabled.</source>
-        <target state="needs-translation">Method %s does not exist. Module %s disabled.</target>
+        <target state="final">La méthode %s n'existe pas. Le module %s est désactivé.</target>
         <note>classes/UpgradeTools/Module/ModuleMigration.php:166</note>
       </trans-unit>
       <trans-unit id="212d17b84ed7ed05df35b5fb0c805eea" approved="yes">
@@ -1125,9 +1125,9 @@
         <target state="needs-translation"><![CDATA[Module %s update files (%s => %s) have been fetched from %s.]]></target>
         <note>classes/UpgradeTools/Module/ModuleDownloader.php:101</note>
       </trans-unit>
-      <trans-unit id="83e483e14240bf9d88eff9fa253133ca">
+      <trans-unit id="83e483e14240bf9d88eff9fa253133ca" approved="yes">
         <source>The received module archive is empty.</source>
-        <target state="needs-translation">The received module archive is empty.</target>
+        <target state="final">L'archive du module reçu est vide.</target>
         <note>classes/UpgradeTools/Module/ModuleDownloader.php:117</note>
       </trans-unit>
       <trans-unit id="7a0dd1e622442e88dc5c8cf1520997b4" approved="yes">
@@ -1245,14 +1245,14 @@
         <target state="final">Il y a un problème avec le réseau ou la connexion.</target>
         <note>views/templates/pages/errors/generic.html.twig:76</note>
       </trans-unit>
-      <trans-unit id="1c59b2d566cf0f4533a11c6aee1efbe0">
+      <trans-unit id="1c59b2d566cf0f4533a11c6aee1efbe0" approved="yes">
         <source>The request timed out. It seems the connection took too long to respond. This could be due to:</source>
-        <target state="needs-translation">The request timed out. It seems the connection took too long to respond. This could be due to:</target>
+        <target state="final">La requête a expiré. Il semble que la connexion ait mis trop de temps à répondre. Cela peut être dû à :</target>
         <note>views/templates/pages/errors/generic.html.twig:56</note>
       </trans-unit>
-      <trans-unit id="041882b89e5cb17a517964726e83d6fe">
+      <trans-unit id="041882b89e5cb17a517964726e83d6fe" approved="yes">
         <source>A slow or unstable internet connection.</source>
-        <target state="needs-translation">A slow or unstable internet connection.</target>
+        <target state="final">Une connexion Internet lente ou instable.</target>
         <note>views/templates/pages/errors/generic.html.twig:58</note>
       </trans-unit>
       <trans-unit id="24585fc097351e62dbb51f1b03253c0c" approved="yes">
@@ -1265,24 +1265,24 @@
         <target state="final">Problèmes de réseau temporaires.</target>
         <note>views/templates/pages/errors/generic.html.twig:60</note>
       </trans-unit>
-      <trans-unit id="46ca90ea04d6e0d0d7d3f4b09b25f4a1">
+      <trans-unit id="46ca90ea04d6e0d0d7d3f4b09b25f4a1" approved="yes">
         <source>The response received from the server in malformed. This can happen if:</source>
-        <target state="needs-translation">The response received from the server in malformed. This can happen if:</target>
+        <target state="final">La réponse reçue du serveur est malformée. Cela peut se produire si :</target>
         <note>views/templates/pages/errors/generic.html.twig:65</note>
       </trans-unit>
-      <trans-unit id="e47f6a28b0c444959e5f81a81becfc1e">
+      <trans-unit id="e47f6a28b0c444959e5f81a81becfc1e" approved="yes">
         <source>The request did not reach the module.</source>
-        <target state="needs-translation">The request did not reach the module.</target>
+        <target state="final">La requête n'a pas atteint le module.</target>
         <note>views/templates/pages/errors/generic.html.twig:67</note>
       </trans-unit>
-      <trans-unit id="cdec08a91e267ead2efe690cabf53ab8">
+      <trans-unit id="cdec08a91e267ead2efe690cabf53ab8" approved="yes">
         <source>There’s an issue processing the response on the app or browser.</source>
-        <target state="needs-translation">There’s an issue processing the response on the app or browser.</target>
+        <target state="final">Il y a un problème lors du traitement de la réponse sur l'application ou le navigateur.</target>
         <note>views/templates/pages/errors/generic.html.twig:68</note>
       </trans-unit>
-      <trans-unit id="201ad8cac531a92e1ec77ae5c1e7aa20">
+      <trans-unit id="201ad8cac531a92e1ec77ae5c1e7aa20" approved="yes">
         <source>Post-update checklist</source>
-        <target state="needs-translation">Post-update checklist</target>
+        <target state="final">Post-mise à jour checklist</target>
         <note>views/templates/steps/post-update.html.twig:24</note>
       </trans-unit>
       <trans-unit id="91aac5a444c7ad75c9adad01b3253de8" approved="yes">
@@ -1340,9 +1340,9 @@
         <target state="final">Si vous ne pouvez pas accéder à votre back-office, essayez d'activer le mode debug manuellement dans config/defines.inc.php en définissant _PS_MODE_DEV_ sur true.</target>
         <note>views/templates/steps/post-update.html.twig:81</note>
       </trans-unit>
-      <trans-unit id="fef46e5063ce3dc78b8ae64fa474241d">
+      <trans-unit id="fef46e5063ce3dc78b8ae64fa474241d" approved="yes">
         <source>Exit</source>
-        <target state="needs-translation">Exit</target>
+        <target state="final">Quitter</target>
         <note>views/templates/layouts/error.html.twig:52</note>
       </trans-unit>
       <trans-unit id="4ba42d4d681d17d9bee2f6228c326069" approved="yes">
@@ -1350,9 +1350,9 @@
         <target state="final">Ouvrir la documentation développeur</target>
         <note>views/templates/steps/post-restore.html.twig:87</note>
       </trans-unit>
-      <trans-unit id="3d6cd7dd6feb249f99dd689ec7db7e81">
+      <trans-unit id="3d6cd7dd6feb249f99dd689ec7db7e81" approved="yes">
         <source>Post-restore checklist</source>
-        <target state="needs-translation">Post-restore checklist</target>
+        <target state="final">Post-restauration checklist</target>
         <note>views/templates/steps/post-restore.html.twig:24</note>
       </trans-unit>
       <trans-unit id="ae4a0e3a1c9d80344cf29e3f909861b5" approved="yes">
@@ -1370,29 +1370,29 @@
         <target state="final">Si vous ne pouvez pas accéder à votre back-office, essayez de vider le cache.</target>
         <note>views/templates/steps/post-restore.html.twig:63</note>
       </trans-unit>
-      <trans-unit id="8f54da32d0160f178f08b2530d1e690b">
+      <trans-unit id="8f54da32d0160f178f08b2530d1e690b" approved="yes">
         <source>Back up your store</source>
-        <target state="needs-translation">Back up your store</target>
+        <target state="final">Sauvegarder votre boutique</target>
         <note>views/templates/steps/backup-options.html.twig:24</note>
       </trans-unit>
-      <trans-unit id="9c32ff52925ba5a296f9696cfbb7edcc">
+      <trans-unit id="9c32ff52925ba5a296f9696cfbb7edcc" approved="yes">
         <source>Backing up your store's files, database, and images means you can restore to a previous version if something goes wrong during the update. This keeps your data safe and ensures your business stays up and running.</source>
-        <target state="needs-translation">Backing up your store's files, database, and images means you can restore to a previous version if something goes wrong during the update. This keeps your data safe and ensures your business stays up and running.</target>
+        <target state="final">La sauvegarde des fichiers, de la base de données et des images de votre boutique signifie que vous pouvez restaurer une version antérieure en cas de problème lors de la mise à jour. Cela permet de protéger vos données et de garantir la continuité de votre activité.</target>
         <note>views/templates/steps/backup.html.twig:30</note>
       </trans-unit>
-      <trans-unit id="a2eabcbade98a44462292c4666e62044">
+      <trans-unit id="a2eabcbade98a44462292c4666e62044" approved="yes">
         <source>Backup completed</source>
-        <target state="needs-translation">Backup completed</target>
+        <target state="final">Sauvegarde terminée</target>
         <note>views/templates/steps/backup-options.html.twig:38</note>
       </trans-unit>
-      <trans-unit id="11934523e2ab02034c868cd62e048c7f">
+      <trans-unit id="11934523e2ab02034c868cd62e048c7f" approved="yes">
         <source>It is available at /your-admin-directory/autoupgrade/backup. You're ready to start the update now.</source>
-        <target state="needs-translation">It is available at /your-admin-directory/autoupgrade/backup. You're ready to start the update now.</target>
+        <target state="final">Il est disponible dans /votre-répertoire-administrateur/autoupgrade/backup. Vous êtes prêt à démarrer la mise à jour maintenant.</target>
         <note>views/templates/steps/backup-options.html.twig:39</note>
       </trans-unit>
-      <trans-unit id="a946e4190a81d83574867d2182261e35">
+      <trans-unit id="a946e4190a81d83574867d2182261e35" approved="yes">
         <source>Include images in your backup</source>
-        <target state="needs-translation">Include images in your backup</target>
+        <target state="final">Inclure des images dans votre sauvegarde</target>
         <note>views/templates/steps/backup-options.html.twig:62</note>
       </trans-unit>
       <trans-unit id="880d6ec7b06e1f403347a16afbca8335" approved="yes">
@@ -1400,19 +1400,19 @@
         <target state="final">Démarrer la mise à jour</target>
         <note>views/templates/dialogs/dialog-update.html.twig:72</note>
       </trans-unit>
-      <trans-unit id="b27bea61eb2963cb570ce625b87ea053">
+      <trans-unit id="b27bea61eb2963cb570ce625b87ea053" approved="yes">
         <source>Update without backup</source>
-        <target state="needs-translation">Update without backup</target>
+        <target state="final">Mettre à jour sans sauvegarde</target>
         <note>views/templates/steps/backup.html.twig:60</note>
       </trans-unit>
-      <trans-unit id="2284aa8fec405e1dd014326b51cde020">
+      <trans-unit id="2284aa8fec405e1dd014326b51cde020" approved="yes">
         <source>Launch backup</source>
-        <target state="needs-translation">Launch backup</target>
+        <target state="final">Lancer la sauvegarde</target>
         <note>views/templates/steps/backup-options.html.twig:97</note>
       </trans-unit>
-      <trans-unit id="754e7de2554f7664a9ccacff4791b8cc">
+      <trans-unit id="754e7de2554f7664a9ccacff4791b8cc" approved="yes">
         <source>Deactivate non-native modules</source>
-        <target state="needs-translation">Deactivate non-native modules</target>
+        <target state="final">Désactiver les modules non natifs</target>
         <note>views/templates/steps/update-options.html.twig:39</note>
       </trans-unit>
       <trans-unit id="fab66f5eb74bc9e4bbba4898fa2254ed">
@@ -1475,24 +1475,24 @@
         <target state="needs-translation">No backup file found on your store.</target>
         <note>views/templates/steps/home.html.twig:46</note>
       </trans-unit>
-      <trans-unit id="e0c4332e8c13be976552a059f106354f">
+      <trans-unit id="e0c4332e8c13be976552a059f106354f" approved="yes">
         <source>Get Started</source>
-        <target state="needs-translation">Get Started</target>
+        <target state="final">Commencer</target>
         <note>views/templates/steps/home.html.twig:56</note>
       </trans-unit>
-      <trans-unit id="a7446965a3635b6a69697078130d961a">
+      <trans-unit id="a7446965a3635b6a69697078130d961a" approved="yes">
         <source>You're up to date</source>
-        <target state="needs-translation">You're up to date</target>
+        <target state="final">Votre boutique est à jour</target>
         <note>views/templates/steps/version-choice.html.twig:45</note>
       </trans-unit>
-      <trans-unit id="51f5b5450d5049fad7db124dbd2c9bbc">
+      <trans-unit id="51f5b5450d5049fad7db124dbd2c9bbc" approved="yes">
         <source>Current PrestaShop version: %currentPrestashopVersion%</source>
-        <target state="needs-translation">Current PrestaShop version: %currentPrestashopVersion%</target>
+        <target state="final">Version actuelle de PrestaShop : %currentPrestashopVersion%</target>
         <note>views/templates/steps/version-choice.html.twig:91</note>
       </trans-unit>
-      <trans-unit id="ec1cf222806c00ea71fb3800dd34d039">
+      <trans-unit id="ec1cf222806c00ea71fb3800dd34d039" approved="yes">
         <source>Current PHP version: %currentPhpVersion%</source>
-        <target state="needs-translation">Current PHP version: %currentPhpVersion%</target>
+        <target state="final">Version PHP actuelle : %currentPhpVersion%</target>
         <note>views/templates/steps/version-choice.html.twig:95</note>
       </trans-unit>
       <trans-unit id="d4399327e9bb1d9fb589b58332f07d48">
