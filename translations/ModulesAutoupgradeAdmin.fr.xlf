@@ -1105,19 +1105,19 @@
         <target state="needs-translation">Method %s does not exist. Module %s disabled.</target>
         <note>classes/UpgradeTools/Module/ModuleMigration.php:166</note>
       </trans-unit>
-      <trans-unit id="212d17b84ed7ed05df35b5fb0c805eea">
+      <trans-unit id="212d17b84ed7ed05df35b5fb0c805eea" approved="yes">
         <source>Error when trying to extract module %s.</source>
-        <target state="needs-translation">Error when trying to extract module %s.</target>
+        <target state="final">Erreur lors de la tentative d'extraction du module %s.</target>
         <note>classes/UpgradeTools/Module/ModuleUnzipper.php:55</note>
       </trans-unit>
-      <trans-unit id="de4c47f6bfc2283a2424f2e4610e06ea">
+      <trans-unit id="de4c47f6bfc2283a2424f2e4610e06ea" approved="yes">
         <source>Download of source #%s has failed.</source>
-        <target state="needs-translation">Download of source #%s has failed.</target>
+        <target state="final">Le téléchargement de la source #%s a échoué.</target>
         <note>classes/UpgradeTools/Module/ModuleDownloader.php:70</note>
       </trans-unit>
-      <trans-unit id="9fffa3812df1e3754b9bbbd256c37437">
+      <trans-unit id="9fffa3812df1e3754b9bbbd256c37437" approved="yes">
         <source>All download attempts have failed. Check your environment and try again.</source>
-        <target state="needs-translation">All download attempts have failed. Check your environment and try again.</target>
+        <target state="final">Toutes les tentatives de téléchargement ont échoué. Vérifiez votre environnement et réessayez.</target>
         <note>classes/UpgradeTools/Module/ModuleDownloader.php:75</note>
       </trans-unit>
       <trans-unit id="88a8e935ad1b255eae2a4c490886b83a">
@@ -1130,24 +1130,24 @@
         <target state="needs-translation">The received module archive is empty.</target>
         <note>classes/UpgradeTools/Module/ModuleDownloader.php:117</note>
       </trans-unit>
-      <trans-unit id="7a0dd1e622442e88dc5c8cf1520997b4">
+      <trans-unit id="7a0dd1e622442e88dc5c8cf1520997b4" approved="yes">
         <source>Invalid contents from provider (Got an XML file).</source>
-        <target state="needs-translation">Invalid contents from provider (Got an XML file).</target>
+        <target state="final">Contenu invalide du provider (Fichier XML).</target>
         <note>classes/UpgradeTools/Module/ModuleDownloader.php:122</note>
       </trans-unit>
-      <trans-unit id="2f6767f7a35a93e9462d6ec6a237fd0d">
+      <trans-unit id="2f6767f7a35a93e9462d6ec6a237fd0d" approved="yes">
         <source>%dir% does not exist or is not a directory.</source>
-        <target state="needs-translation">%dir% does not exist or is not a directory.</target>
+        <target state="final">%dir% n'existe pas ou n'est pas un répertoire.</target>
         <note>classes/UpgradeTools/Module/ModuleAdapter.php:136</note>
       </trans-unit>
-      <trans-unit id="0ffc32ecace92b6d10bd5247b54fff15">
+      <trans-unit id="0ffc32ecace92b6d10bd5247b54fff15" approved="yes">
         <source>%s does not exist or is not a directory.</source>
-        <target state="needs-translation">%s does not exist or is not a directory.</target>
+        <target state="final">%s n'existe pas ou n'est pas un répertoire.</target>
         <note>classes/UpgradeTools/Module/ModuleAdapter.php:136</note>
       </trans-unit>
-      <trans-unit id="494e9240706355902c051f7edbff16d8">
+      <trans-unit id="494e9240706355902c051f7edbff16d8" approved="yes">
         <source>Unknown channel %s</source>
-        <target state="needs-translation">Unknown channel %s</target>
+        <target state="final">Canal %s inconnu</target>
         <note>classes/Parameters/ConfigurationValidator.php:79</note>
       </trans-unit>
       <trans-unit id="a1e2f27f691acb7eff72046d0c6d15b9" approved="yes">
@@ -1155,19 +1155,19 @@
         <target state="final">Aucune archive zip fournie</target>
         <note>classes/Parameters/ConfigurationValidator.php:88</note>
       </trans-unit>
-      <trans-unit id="08ecdfa1e85ff7b6cc146b6a61690840">
+      <trans-unit id="08ecdfa1e85ff7b6cc146b6a61690840" approved="yes">
         <source>No xml archive provided</source>
-        <target state="needs-translation">No xml archive provided</target>
+        <target state="final">Aucune archive xml fournie</target>
         <note>classes/Parameters/ConfigurationValidator.php:97</note>
       </trans-unit>
-      <trans-unit id="8f6819dd1d8ef2e214833f667fe994b0">
+      <trans-unit id="8f6819dd1d8ef2e214833f667fe994b0" approved="yes">
         <source>Value must be a boolean for %s</source>
-        <target state="needs-translation">Value must be a boolean for %s</target>
+        <target state="final">La valeur doit être un booléen pour %s</target>
         <note>classes/Parameters/ConfigurationValidator.php:109</note>
       </trans-unit>
-      <trans-unit id="80c25611ea9134bac1da1d91eb03544a">
+      <trans-unit id="80c25611ea9134bac1da1d91eb03544a" approved="yes">
         <source>Both 'xml' and 'zip' files attributes must be provided to use the local channel.</source>
-        <target state="needs-translation">Both 'xml' and 'zip' files attributes must be provided to use the local channel.</target>
+        <target state="final">Les attributs des fichiers « xml » et « zip » doivent être fournis pour utiliser le canal local.</target>
         <note>classes/Parameters/LocalChannelConfigurationValidator.php:113</note>
       </trans-unit>
       <trans-unit id="1d1a5763d2901dbd435b378358a149b4" approved="yes">
@@ -1175,74 +1175,74 @@
         <target state="final">Le fichier %s n'existe pas. Impossible de sélectionner ce canal.</target>
         <note>classes/Parameters/LocalChannelConfigurationValidator.php:155</note>
       </trans-unit>
-      <trans-unit id="a9c58dc4da830f87b1f0cb9e2b6f8a1c">
+      <trans-unit id="a9c58dc4da830f87b1f0cb9e2b6f8a1c" approved="yes">
         <source>We couldn't find a PrestaShop version in the XML file that was uploaded in your local archive. Please try again.</source>
-        <target state="needs-translation">We couldn't find a PrestaShop version in the XML file that was uploaded in your local archive. Please try again.</target>
+        <target state="final">Nous n'avons pas pu trouver de version de PrestaShop dans le fichier XML téléchargé dans vos archives locales. Veuillez réessayer.</target>
         <note>classes/Parameters/LocalChannelConfigurationValidator.php:164</note>
       </trans-unit>
-      <trans-unit id="9faf1391c6c018a5f5343bd509fe8e96">
+      <trans-unit id="9faf1391c6c018a5f5343bd509fe8e96" approved="yes">
         <source>The PrestaShop version in your archive doesn't match the one in XML file. Please fix this issue and try again.</source>
-        <target state="needs-translation">The PrestaShop version in your archive doesn't match the one in XML file. Please fix this issue and try again.</target>
+        <target state="final">La version de PrestaShop dans votre archive ne correspond pas à celle du fichier XML. Veuillez résoudre ce problème et réessayer.</target>
         <note>classes/Parameters/LocalChannelConfigurationValidator.php:179</note>
       </trans-unit>
-      <trans-unit id="a262dcc571fbbaf29e2df23238ce2f89">
+      <trans-unit id="a262dcc571fbbaf29e2df23238ce2f89" approved="yes">
         <source>Backup name is missing</source>
-        <target state="needs-translation">Backup name is missing</target>
+        <target state="final">Le nom de la sauvegarde est manquant</target>
         <note>classes/Parameters/RestoreConfigurationValidator.php:82</note>
       </trans-unit>
-      <trans-unit id="394fde085070ca40c83c0238953f7c08">
+      <trans-unit id="394fde085070ca40c83c0238953f7c08" approved="yes">
         <source>Backup %s does not exist</source>
-        <target state="needs-translation">Backup %s does not exist</target>
+        <target state="final">La sauvegarde %s n'existe pas</target>
         <note>classes/Parameters/RestoreConfigurationValidator.php:91</note>
       </trans-unit>
-      <trans-unit id="08272c6ff59a6aec084b9a2afc3e9cff">
+      <trans-unit id="08272c6ff59a6aec084b9a2afc3e9cff" approved="yes">
         <source>Unable to retrieve channel.xml.</source>
-        <target state="needs-translation">Unable to retrieve channel.xml.</target>
+        <target state="final">Impossible de contacter le channel.xml.</target>
         <note>classes/Upgrader.php:131</note>
       </trans-unit>
-      <trans-unit id="145fb1b6e329f327f5da09ba6843675b">
+      <trans-unit id="145fb1b6e329f327f5da09ba6843675b" approved="yes">
         <source>The requested page or resource could not be found. This might be due to:</source>
-        <target state="needs-translation">The requested page or resource could not be found. This might be due to:</target>
+        <target state="final">La page ou la ressource demandée n'a pas pu être trouvée. Cela peut être dû à :</target>
         <note>views/templates/pages/errors/404.html.twig:24</note>
       </trans-unit>
-      <trans-unit id="8c3c66ab18ac1d6716a6be5263d06b7d">
+      <trans-unit id="8c3c66ab18ac1d6716a6be5263d06b7d" approved="yes">
         <source>A broken or outdated link.</source>
-        <target state="needs-translation">A broken or outdated link.</target>
+        <target state="final">Un lien brisé ou obsolète.</target>
         <note>views/templates/pages/errors/404.html.twig:26</note>
       </trans-unit>
-      <trans-unit id="3b2a346bb68a2fee49d471ea80d05279">
+      <trans-unit id="3b2a346bb68a2fee49d471ea80d05279" approved="yes">
         <source>The page being moved or deleted.</source>
-        <target state="needs-translation">The page being moved or deleted.</target>
+        <target state="final">La page est déplacée ou supprimée.</target>
         <note>views/templates/pages/errors/404.html.twig:27</note>
       </trans-unit>
-      <trans-unit id="ad16662df4855044f3ab48f0a786186f">
+      <trans-unit id="ad16662df4855044f3ab48f0a786186f" approved="yes">
         <source>A typo in the URL.</source>
-        <target state="needs-translation">A typo in the URL.</target>
+        <target state="final">Une faute de frappe dans l'URL.</target>
         <note>views/templates/pages/errors/404.html.twig:28</note>
       </trans-unit>
-      <trans-unit id="0030b42e4333ad592ea86064f241c287">
+      <trans-unit id="0030b42e4333ad592ea86064f241c287" approved="yes">
         <source>It seems there was an issue with the server. This type of error usually happens when:</source>
-        <target state="needs-translation">It seems there was an issue with the server. This type of error usually happens when:</target>
+        <target state="final">Il semble qu'il y ait eu un problème avec le serveur. Ce type d'erreur se produit généralement lorsque :</target>
         <note>views/templates/pages/errors/generic.html.twig:40</note>
       </trans-unit>
-      <trans-unit id="994b142d19dee01440bbd763dd9dda42">
+      <trans-unit id="994b142d19dee01440bbd763dd9dda42" approved="yes">
         <source>The server is temporarily unavailable.</source>
-        <target state="needs-translation">The server is temporarily unavailable.</target>
+        <target state="final">Le serveur est temporairement indisponible.</target>
         <note>views/templates/pages/errors/generic.html.twig:75</note>
       </trans-unit>
-      <trans-unit id="014c30741ff5c89cbf8f6e913e1e0848">
+      <trans-unit id="014c30741ff5c89cbf8f6e913e1e0848" approved="yes">
         <source>There's a misconfiguration or unexpected problem on the server.</source>
-        <target state="needs-translation">There's a misconfiguration or unexpected problem on the server.</target>
+        <target state="final">Il y a une mauvaise configuration ou un problème inattendu sur le serveur.</target>
         <note>views/templates/pages/errors/generic.html.twig:43</note>
       </trans-unit>
-      <trans-unit id="b984541b3506893e8f0c3f91503dbcfc">
+      <trans-unit id="b984541b3506893e8f0c3f91503dbcfc" approved="yes">
         <source>It looks like there is no data received from the server. This can happen if:</source>
-        <target state="needs-translation">It looks like there is no data received from the server. This can happen if:</target>
+        <target state="final">Il semble qu'il n'y ait aucune donnée reçue du serveur. Cela peut se produire si :</target>
         <note>views/templates/pages/errors/generic.html.twig:73</note>
       </trans-unit>
-      <trans-unit id="3a70d4513215a450c03e6d61d47ca44a">
+      <trans-unit id="3a70d4513215a450c03e6d61d47ca44a" approved="yes">
         <source>There's an issue with the network or connection.</source>
-        <target state="needs-translation">There's an issue with the network or connection.</target>
+        <target state="final">Il y a un problème avec le réseau ou la connexion.</target>
         <note>views/templates/pages/errors/generic.html.twig:76</note>
       </trans-unit>
       <trans-unit id="1c59b2d566cf0f4533a11c6aee1efbe0">
@@ -1255,14 +1255,14 @@
         <target state="needs-translation">A slow or unstable internet connection.</target>
         <note>views/templates/pages/errors/generic.html.twig:58</note>
       </trans-unit>
-      <trans-unit id="24585fc097351e62dbb51f1b03253c0c">
+      <trans-unit id="24585fc097351e62dbb51f1b03253c0c" approved="yes">
         <source>The server is currently busy or unresponsive.</source>
-        <target state="needs-translation">The server is currently busy or unresponsive.</target>
+        <target state="final">Le serveur est actuellement occupé ou ne répond pas.</target>
         <note>views/templates/pages/errors/generic.html.twig:59</note>
       </trans-unit>
-      <trans-unit id="8696259259c446a2a399d95c55769172">
+      <trans-unit id="8696259259c446a2a399d95c55769172" approved="yes">
         <source>Temporary network issues.</source>
-        <target state="needs-translation">Temporary network issues.</target>
+        <target state="final">Problèmes de réseau temporaires.</target>
         <note>views/templates/pages/errors/generic.html.twig:60</note>
       </trans-unit>
       <trans-unit id="46ca90ea04d6e0d0d7d3f4b09b25f4a1">
@@ -1395,9 +1395,9 @@
         <target state="needs-translation">Include images in your backup</target>
         <note>views/templates/steps/backup-options.html.twig:62</note>
       </trans-unit>
-      <trans-unit id="880d6ec7b06e1f403347a16afbca8335">
+      <trans-unit id="880d6ec7b06e1f403347a16afbca8335" approved="yes">
         <source>Start update</source>
-        <target state="needs-translation">Start update</target>
+        <target state="final">Démarrer la mise à jour</target>
         <note>views/templates/dialogs/dialog-update.html.twig:72</note>
       </trans-unit>
       <trans-unit id="b27bea61eb2963cb570ce625b87ea053">
@@ -1440,9 +1440,9 @@
         <target state="needs-translation"><![CDATA[Overriding is a way to replace business behaviors (class files and controller files) to target only one method or as many as you need. This option disables all classes & controllers overrides, allowing you to avoid conflicts during and after updates.]]></target>
         <note>views/templates/steps/update-options.html.twig:58</note>
       </trans-unit>
-      <trans-unit id="10ac3d04253ef7e1ddc73e6091c0cd55">
+      <trans-unit id="10ac3d04253ef7e1ddc73e6091c0cd55" approved="yes">
         <source>Next</source>
-        <target state="needs-translation">Next</target>
+        <target state="final">Suivant</target>
         <note>views/templates/steps/version-choice.html.twig:143</note>
       </trans-unit>
       <trans-unit id="c940aa73d021ae9e13f265237b0e4f96">
@@ -1505,9 +1505,9 @@
         <target state="needs-translation">You are already using the latest PrestaShop version available but you can update to the version of your choice from a local archive.</target>
         <note>views/templates/steps/version-choice.html.twig:76</note>
       </trans-unit>
-      <trans-unit id="8846fe014be5f3ecb8f82a4deea082cc">
+      <trans-unit id="8846fe014be5f3ecb8f82a4deea082cc" approved="yes">
         <source>A more recent version is available</source>
-        <target state="needs-translation">A more recent version is available</target>
+        <target state="final">Une version plus récente est disponible</target>
         <note>views/templates/steps/version-choice.html.twig:87</note>
       </trans-unit>
       <trans-unit id="87f38afeefb1be807bf6150edbb2669b">
@@ -1615,9 +1615,9 @@
         <target state="needs-translation">Learn more about your data and your rights</target>
         <note>views/templates/dialogs/dialog-error-report.html.twig:34</note>
       </trans-unit>
-      <trans-unit id="e20cbb947afcf84cf58de1358ee1068d">
+      <trans-unit id="e20cbb947afcf84cf58de1358ee1068d" approved="yes">
         <source>Error message</source>
-        <target state="needs-translation">Error message</target>
+        <target state="final">Message d'erreur</target>
         <note>views/templates/dialogs/dialog-error-report.html.twig:45</note>
       </trans-unit>
       <trans-unit id="ea5957193770106ccbb79106b47c06a6">
@@ -1835,9 +1835,9 @@
         <target state="needs-translation">Select the backup you want to restore to</target>
         <note>views/templates/components/backup-selection.html.twig:30</note>
       </trans-unit>
-      <trans-unit id="6adab6d3fdf92c448d60cf8824e4851c">
+      <trans-unit id="6adab6d3fdf92c448d60cf8824e4851c" approved="yes">
         <source>Delete selection</source>
-        <target state="needs-translation">Delete selection</target>
+        <target state="final">Supprimer la sélection</target>
         <note>views/templates/components/backup-selection.html.twig:52</note>
       </trans-unit>
       <trans-unit id="c2efe4bbd13e6cb0db293e72884273c0">
