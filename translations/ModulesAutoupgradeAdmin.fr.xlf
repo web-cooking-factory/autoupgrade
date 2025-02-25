@@ -1495,9 +1495,9 @@
         <target state="final">Version PHP actuelle : %currentPhpVersion%</target>
         <note>views/templates/steps/version-choice.html.twig:95</note>
       </trans-unit>
-      <trans-unit id="d4399327e9bb1d9fb589b58332f07d48">
+      <trans-unit id="d4399327e9bb1d9fb589b58332f07d48" approved="yes">
         <source>Unlock the local update feature and manually update your store to your preferred upgrade by saving the archive and XML files of the PrestaShop version in the following directory on your server: %pathToLocalArchive%</source>
-        <target state="needs-translation">Unlock the local update feature and manually update your store to your preferred upgrade by saving the archive and XML files of the PrestaShop version in the following directory on your server: %pathToLocalArchive%</target>
+        <target state="final">Déverrouillez la fonctionnalité de mise à jour locale et mettez à jour manuellement votre boutique vers votre distribution personnalisée en enregistrant l'archive et le fichier XML de la version PrestaShop dans le répertoire suivant sur votre serveur : %pathToLocalArchive%</target>
         <note>views/templates/steps/version-choice.html.twig:127</note>
       </trans-unit>
       <trans-unit id="34b3f55bce0f37bcd82294fbc4702aad">
@@ -1510,9 +1510,9 @@
         <target state="final">Une version plus récente est disponible</target>
         <note>views/templates/steps/version-choice.html.twig:87</note>
       </trans-unit>
-      <trans-unit id="87f38afeefb1be807bf6150edbb2669b">
+      <trans-unit id="87f38afeefb1be807bf6150edbb2669b" approved="yes">
         <source>Select version</source>
-        <target state="needs-translation">Select version</target>
+        <target state="final">Sélectionner la version</target>
         <note>views/templates/steps/version-choice.html.twig:103</note>
       </trans-unit>
       <trans-unit id="de8e4445ea5c918fe6c8e70eb7deb722">
