@@ -16,40 +16,37 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
  *#}
-<form
-  class="form-group backup-selection"
-  action=""
-  data-route-to-save="{{ form_route_to_save }}"
-  data-route-to-submit-restore="{{ form_route_to_submit_restore }}"
-  data-route-to-submit-delete="{{ form_route_to_submit_delete }}"
-  id="{{ form_backup_selection_name }}"
-  name="{{ form_backup_selection_name }}"
->
-  <div class="backup-selection__infos">
+{% extends "@ModuleAutoUpgrade/components/render-field.html.twig" %}
+
+{% block action_content %}
+  <div class="render-field__backup-selection">
     <label for="{{ form_fields.BACKUP_NAME }}">
       {{ 'Select the backup you want to restore to'|trans({}) }}
     </label>
 
-    <select id="{{ form_fields.BACKUP_NAME }}" name="{{ form_fields.BACKUP_NAME }}">
-      {% for backup in backups_available %}
-        <option
-                value="{{ backup.filename }}"
-                {% if backup.filename == current_backup %}
-                  selected
-                {% endif %}
-        >
+    <div class="render-field__backup-selection-wrapper">
+      <select class="form-control render-field__backup-selection-select" id="{{ form_fields.BACKUP_NAME }}" name="{{ form_fields.BACKUP_NAME }}">
+        {% for backup in backups_available %}
+          <option
+            value="{{ backup.filename }}"
+            {% if backup.filename == current_backup %}
+              selected
+            {% endif %}
+          >
             {{ backup.datetime }} &nbsp;-&nbsp; {{ backup.filename }}
-        </option>
-      {% endfor %}
-    </select>
+          </option>
+        {% endfor %}
+      </select>
+
+      <button
+        class="btn btn-link render-field__backup-selection-delete"
+        name="action"
+        type="submit"
+        value="delete"
+      >
+        {{ 'Delete selection'|trans({}) }}
+        <i class="material-icons">delete</i>
+      </button>
+    </div>
   </div>
-  <button
-    class="btn btn-link backup-selection__delete"
-    name="action"
-    type="submit"
-    value="delete"
-  >
-    {{ 'Delete selection'|trans({}) }}
-    <i class="material-icons">delete</i>
-  </button>
-</form>
+{% endblock %}

@@ -16,23 +16,25 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
  *#}
-<div class="render-field {% if description is not defined or not description %}render-field--no-desc{% endif %}">
-  <div class="render-field__infos">
-    {% if title is defined and title %}
-      <p class="render-field__title">
-        {{ title }}
-        {% if required is defined and required %}
-          <sup class="text-danger">*</sup>
-        {% endif %}
-      </p>
-    {% endif %}
+<div class="render-field {% if backup_selection is defined and backup_selection %}render-field--backup-selection{% endif %} {% if description is not defined or not description %}render-field--no-desc{% endif %}">
+  {% if backup_selection is not defined or not backup_selection %}
+    <div class="render-field__infos">
+      {% if title is defined and title %}
+        <p class="render-field__title">
+          {{ title }}
+          {% if required is defined and required %}
+            <sup class="text-danger">*</sup>
+          {% endif %}
+        </p>
+      {% endif %}
 
-    {% if description is defined and description %}
-      <p class="render-field__desc text-muted">
-        {{ description }}
-      </p>
-    {% endif %}
-  </div>
+      {% if description is defined and description %}
+        <p class="render-field__desc text-muted">
+          {{ description }}
+        </p>
+      {% endif %}
+    </div>
+  {% endif %}
 
   <div class="render-field__action">
     {% block action_content %}
