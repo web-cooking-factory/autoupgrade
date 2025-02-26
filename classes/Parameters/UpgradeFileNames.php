@@ -46,6 +46,8 @@ class UpgradeFileNames
 
     const RESTORE_CONFIG_FILENAME = 'restore_config.var';
 
+    const LANGUAGE_CONFIG_FILENAME = 'language_config.var';
+
     /**
      * during upgradeFiles process,
      * this files contains the list of files left to upgrade in a serialized array.

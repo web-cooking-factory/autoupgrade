@@ -45,8 +45,13 @@ class ConfigurationStorage
         return new RestoreConfiguration($this->storage->load(UpgradeFileNames::RESTORE_CONFIG_FILENAME));
     }
 
+    public function loadLanguageConfiguration(): LanguageConfiguration
+    {
+        return new LanguageConfiguration($this->storage->load(UpgradeFileNames::LANGUAGE_CONFIG_FILENAME));
+    }
+
     /**
-     * @param UpgradeConfiguration|RestoreConfiguration $config
+     * @param UpgradeConfiguration|RestoreConfiguration|LanguageConfiguration $config
      *
      * @return bool
      */
@@ -58,6 +63,9 @@ class ConfigurationStorage
                 break;
             case RestoreConfiguration::class:
                 $fileName = UpgradeFileNames::RESTORE_CONFIG_FILENAME;
+                break;
+            case LanguageConfiguration::class:
+                $fileName = UpgradeFileNames::LANGUAGE_CONFIG_FILENAME;
                 break;
             default:
                 throw new \InvalidArgumentException('Configuration class ' . $config . ' is unknown.');
